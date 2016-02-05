@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Transactional
-public abstract class BaseServiceImpl <Entity extends Identificator> implements BaseService<Entity>{
+public abstract class BaseServiceImpl<Entity extends Identificator> implements BaseService<Entity> {
     @Autowired
     protected BaseDao<Entity> dao;
 
@@ -28,7 +28,7 @@ public abstract class BaseServiceImpl <Entity extends Identificator> implements 
         return dao.delete(id);
     }
 
-    public Entity findById(Long id){
+    public Entity findById(Long id) {
         return dao.findById(id);
     }
 }

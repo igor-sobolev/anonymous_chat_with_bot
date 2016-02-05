@@ -9,16 +9,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class PersonServiceImpl extends BaseServiceImpl<User> implements PersonService{
+public class PersonServiceImpl extends BaseServiceImpl<User> implements PersonService {
     public boolean logIn(User user) {
         PersonDao dao = (PersonDao) this.dao;
-        if (dao.logIn(user)) return true;
-        return false;
+        return dao.logIn(user);
     }
 
     public boolean register(User user) {
         PersonDao dao = (PersonDao) this.dao;
-        if (dao.register(user)) return true;
-        return false;
+        return dao.register(user);
     }
 }

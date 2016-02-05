@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * Created by Игорь on 19.06.2015.
- */
 @Controller
 @RequestMapping(value = "/users")
 public class UserController {
@@ -18,7 +15,9 @@ public class UserController {
     PersonService personService;
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public @ResponseBody String register(User user) {
+    public
+    @ResponseBody
+    String register(User user) {
         if (!personService.register(user)) {
             return "Error";
         }
@@ -27,7 +26,9 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public @ResponseBody String login(User user) {
+    public
+    @ResponseBody
+    String login(User user) {
         if (personService.logIn(user)) {
             return "Ok";
         }

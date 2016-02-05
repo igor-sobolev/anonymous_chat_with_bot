@@ -1,32 +1,63 @@
 <div id="chat" class="text-center">
-    <table>
+    <table class="center-block" width="50%">
         <tr>
-            <td colspan="2"></td>
-            <td><button id="logoff">Log off</button></td>
+            <td colspan="3">
+
+            </td>
+            <td>
+                <div id="user-login">
+
+                </div>
+            </td>
+            <td>
+                <button id="logoff" style="width: 100%;">Выйти</button>
+            </td>
         </tr>
         <tr>
-            <td rowspan="2" colspan="3"><textarea readonly id="chat-window"></textarea></td>
-            <td><button id="bot">BOT</button></td>
+            <td rowspan="2" colspan="4">
+                <textarea readonly id="chat-window"
+                          style="overflow:auto; width: 100%; height: 100%; resize: none"></textarea>
+            </td>
+            <td colspan="2">
+                <button id="bot" style="width: 100%;">BOT</button>
+            </td>
         </tr>
         <tr>
-            <td><button id="not">NOT</button></td>
+            <td colspan="2">
+                <button id="not" style="width: 100%;">NOT</button>
+            </td>
         </tr>
         <tr>
-            <td colspan="2"><input type="text"></td>
-            <td><button id="message">Отправить</button></td>
+            <td>
+                <label for="msg-text">Сообщение:</label>
+            </td>
+            <td colspan="2">
+                <input id="msg-text" type="text" style="width: 100%;">
+            </td>
+            <td>
+                <button id="send" style="width: 100%;">Отправить</button>
+            </td>
+            <td>
+
+            </td>
         </tr>
     </table>
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
-        $("#logoff").button();
+        var $logoff = $("#logoff");
+        $logoff.button();
         $("#bot").button();
         $("#not").button();
         $("#send").button();
-        $("#logoff").click(function() {
-            $.get("/resources/html_templates/welcome_form.html", function (data) {
+        $logoff.click(function() {
+            $.get("/resources/html_templates/welcome_form.html", function(data) {
                 $("#main-window").html(data);
             });
         });
+        var html = "<p style=\"font-size: large; \">";
+        html += "User: " + localStorage.getItem("userLogin");
+        html += "</p>";
+        $("#user-login").html(html);
     });
 </script>

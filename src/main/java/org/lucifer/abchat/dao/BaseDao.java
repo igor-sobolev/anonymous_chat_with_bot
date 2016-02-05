@@ -5,15 +5,15 @@ import org.lucifer.abchat.domain.Identificator;
 import java.util.List;
 
 
-public interface BaseDao <Entity extends Identificator>{
+public interface BaseDao<Entity extends Identificator> {
 
-    public Entity save(Entity entity);
+    Entity save(Entity entity);
 
-    public Entity delete(Long id);
+    Entity delete(Long id);
 
-    public List<Entity> getAll();
+    List<Entity> getAll();
 
-    public List<Entity> getList(Long page);
+    List<Entity> getList(Long page);
 
-    public Entity findById(Long id);
+    Entity findById(Long id);
 }

@@ -7,7 +7,7 @@ import org.lucifer.abchat.domain.User;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PersonDaoImpl extends BaseDaoImpl<User> implements PersonDao{
+public class PersonDaoImpl extends BaseDaoImpl<User> implements PersonDao {
     public boolean logIn(User user) {
         Session session = getSession();
         Query query = session.createQuery(
@@ -15,16 +15,15 @@ public class PersonDaoImpl extends BaseDaoImpl<User> implements PersonDao{
                         + user.getLogin() + "' and password='"
                         + user.getPassword() + "'");
         long result = (Long) query.uniqueResult();
-        if (result == 0) return false;
-        return true;
+        return result != 0;
     }
+
     public boolean register(User user) {
         Session session = getSession();
         Query query = session.createQuery(
                 "select count(login) from User where login='"
                         + user.getLogin() + "'");
         long result = (Long) query.uniqueResult();
-        if (result == 0) return true;
-        return false;
+        return result == 0;
     }
 }
