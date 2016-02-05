@@ -1,0 +1,32 @@
+<div id="chat" class="text-center">
+    <table>
+        <tr>
+            <td colspan="2"></td>
+            <td><button id="logoff">Log off</button></td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="3"><textarea readonly id="chat-window"></textarea></td>
+            <td><button id="bot">BOT</button></td>
+        </tr>
+        <tr>
+            <td><button id="not">NOT</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text"></td>
+            <td><button id="message">Отправить</button></td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#logoff").button();
+        $("#bot").button();
+        $("#not").button();
+        $("#send").button();
+        $("#logoff").click(function() {
+            $.get("/resources/html_templates/welcome_form.html", function (data) {
+                $("#main-window").html(data);
+            });
+        });
+    });
+</script>
