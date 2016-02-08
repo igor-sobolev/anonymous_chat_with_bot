@@ -2,11 +2,11 @@ package org.lucifer.abchat.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "USER")
+@SuppressWarnings("JpaAttributeTypeInspection")
 public class User extends Identificator implements Serializable {
 
     @Column(name = "LOGIN")
@@ -17,6 +17,12 @@ public class User extends Identificator implements Serializable {
 
     @Column(name = "EMAIL")
     private String email;
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
+    private Cospeaker cospeaker;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private Set<UserAnswer> answers;
 
     public User() {
 
@@ -50,6 +56,22 @@ public class User extends Identificator implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Cospeaker getCospeaker() {
+        return cospeaker;
+    }
+
+    public void setCospeaker(Cospeaker cospeaker) {
+        this.cospeaker = cospeaker;
+    }
+
+    public Set<UserAnswer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(Set<UserAnswer> answers) {
+        this.answers = answers;
     }
 
     @Override
