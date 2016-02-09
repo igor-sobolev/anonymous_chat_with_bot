@@ -19,4 +19,9 @@ public class PersonServiceImpl extends BaseServiceImpl<User> implements PersonSe
         PersonDao dao = (PersonDao) this.dao;
         return dao.register(user);
     }
+
+    public User findByLogin(String userLogin) {
+        PersonDao dao = (PersonDao) this.dao;
+        return dao.findByLogin(userLogin);
+    }
 }

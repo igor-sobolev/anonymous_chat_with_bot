@@ -26,4 +26,13 @@ public class PersonDaoImpl extends BaseDaoImpl<User> implements PersonDao {
         long result = (Long) query.uniqueResult();
         return result == 0;
     }
+
+    public User findByLogin(String userLogin) {
+        Session session = getSession();
+        Query query = session.createQuery(
+                "from User where login='"
+                        + userLogin + "'");
+        User result = (User) query.uniqueResult();
+        return result;                                  //FIXME if nececary
+    }
 }

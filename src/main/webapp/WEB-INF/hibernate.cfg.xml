@@ -11,5 +11,10 @@
     <property name="show_sql">false</property>
     <property name="hbm2ddl.auto">create</property>
     <mapping class="org.lucifer.abchat.domain.User" />
+    <mapping class="org.lucifer.abchat.domain.Bot" />
+    <mapping class="org.lucifer.abchat.domain.Chat" />
+    <mapping class="org.lucifer.abchat.domain.Cospeaker" />
+    <mapping class="org.lucifer.abchat.domain.Message" />
+    <mapping class="org.lucifer.abchat.domain.UserAnswer" />
   </session-factory>
 </hibernate-configuration>

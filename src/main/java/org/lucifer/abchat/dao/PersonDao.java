@@ -6,4 +6,6 @@ public interface PersonDao extends BaseDao<User> {
     boolean logIn(User user);
 
     boolean register(User user);
+
+    User findByLogin(String userLogin);
 }

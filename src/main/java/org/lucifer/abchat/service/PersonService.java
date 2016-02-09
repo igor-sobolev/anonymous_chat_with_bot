@@ -6,4 +6,6 @@ public interface PersonService extends BaseService<User> {
     boolean logIn(User user);
 
     boolean register(User user);
+
+    User findByLogin(String userLogin);
 }

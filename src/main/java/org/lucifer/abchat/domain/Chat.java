@@ -27,6 +27,11 @@ public class Chat extends Identificator implements Serializable {
 
     }
 
+    public Chat(Cospeaker sp1, Cospeaker sp2) {
+        cospeaker1 = sp1;
+        cospeaker2 = sp2;
+    }
+
     public Cospeaker getCospeaker1() {
         return cospeaker1;
     }

@@ -59,5 +59,8 @@
         html += "User: " + localStorage.getItem("userLogin");
         html += "</p>";
         $("#user-login").html(html);
+        $.get("/resources/html_templates/loading_dialog.html", function(data) {
+            $("#main-window").append(data);
+        });
     });
 </script>
