@@ -52,12 +52,14 @@
             $(this).dialog("destroy").remove();
         },
     });
-    var userLogin = localStorage.getItem("userLogin");      //TODO fucking = but in there norm
+    var user = {
+        login: localStorage.getItem("userLogin")
+    };
     $.ajax({
         url: "/chat/enter",
         type: "POST",
         dataType: "json",
-        data: userLogin,
+        data: user,
         success: function(callback) {
             alert(callback.id);
             $("#loading-dialog").dialog("close");

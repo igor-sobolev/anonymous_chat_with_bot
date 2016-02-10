@@ -12,13 +12,13 @@ import java.util.Set;
 @Entity
 @Table(name = "COSPEAKER")
 public class Cospeaker extends Identificator implements Serializable {
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     private User user;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     private Bot bot;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     private Chat chat;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "source")

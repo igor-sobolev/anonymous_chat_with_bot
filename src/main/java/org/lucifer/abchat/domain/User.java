@@ -1,5 +1,7 @@
 package org.lucifer.abchat.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -18,9 +20,11 @@ public class User extends Identificator implements Serializable {
     @Column(name = "EMAIL")
     private String email;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
+    @OneToOne(mappedBy = "user")
     private Cospeaker cospeaker;
 
+
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private Set<UserAnswer> answers;
 

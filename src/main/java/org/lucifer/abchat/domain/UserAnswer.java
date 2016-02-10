@@ -11,10 +11,10 @@ import java.io.Serializable;
 @Entity
 @Table(name = "USER_ANSWER")
 public class UserAnswer extends Identificator implements Serializable {
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private User user;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     private Chat chat;
 
     @Column(name = "ANSWER")

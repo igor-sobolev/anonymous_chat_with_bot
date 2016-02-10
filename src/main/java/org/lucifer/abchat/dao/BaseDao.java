@@ -1,10 +1,8 @@
 package org.lucifer.abchat.dao;
 
-import org.lucifer.abchat.domain.Chat;
 import org.lucifer.abchat.domain.Identificator;
 
 import java.util.List;
-
 
 public interface BaseDao<Entity extends Identificator> {
 
