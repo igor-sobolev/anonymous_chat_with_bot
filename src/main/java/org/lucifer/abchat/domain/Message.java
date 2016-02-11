@@ -6,16 +6,16 @@ import java.io.Serializable;
 @Entity
 @Table(name = "MESSAGE")
 public class Message extends Identificator implements Serializable {
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Chat chat;
 
     @Column(name = "MESSAGE")
     private String message;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Cospeaker source;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Cospeaker target;
     
     public Message() {

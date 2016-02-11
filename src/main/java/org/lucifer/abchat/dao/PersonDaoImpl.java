@@ -33,6 +33,6 @@ public class PersonDaoImpl extends BaseDaoImpl<User> implements PersonDao {
                 "from User where login='"
                         + userLogin + "'");
         User result = (User) query.uniqueResult();
-        return result;                                  //FIXME if nececary
+        return result;
     }
 }

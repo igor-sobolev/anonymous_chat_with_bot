@@ -1,5 +1,7 @@
 package org.lucifer.abchat.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -20,6 +22,7 @@ public class Chat extends Identificator implements Serializable {
     @OneToOne(mappedBy = "chat")
     private UserAnswer answer;
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "chat")
     private Set<Message> messages;
 

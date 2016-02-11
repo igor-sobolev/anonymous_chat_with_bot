@@ -1,5 +1,7 @@
 package org.lucifer.abchat.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -12,18 +14,20 @@ import java.util.Set;
 @Entity
 @Table(name = "COSPEAKER")
 public class Cospeaker extends Identificator implements Serializable {
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private User user;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Bot bot;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Chat chat;
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "source")
     private Set<Message> sended;
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "target")
     private Set<Message> received;
 

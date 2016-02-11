@@ -1,9 +1,8 @@
 package org.lucifer.abchat.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -13,7 +12,8 @@ import java.io.Serializable;
 @Entity
 @Table(name = "BOT")
 public class Bot extends Identificator implements Serializable {
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "bot")
+    @JsonIgnore
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "bot", cascade = CascadeType.ALL)
     private Cospeaker cospeaker;
 
     public  Bot() {

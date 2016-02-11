@@ -1,21 +1,22 @@
 package org.lucifer.abchat.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Created by PiCy on 2/10/2016.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ChatDTO {
     private Long chatId;
     private Long userId;
-    private Long cospeakerId;
 
     public ChatDTO() {
 
     }
 
-    public ChatDTO(Long chatId, Long userId, Long cospeakerId) {
+    public ChatDTO(Long chatId, Long userId) {
         this.chatId = chatId;
         this.userId = userId;
-        this.cospeakerId = cospeakerId;
     }
 
     public Long getChatId() {
@@ -32,13 +33,5 @@ public class ChatDTO {
 
     public void setUserId(Long userId) {
         this.userId = userId;
-    }
-
-    public Long getCospeakerId() {
-        return cospeakerId;
-    }
-
-    public void setCospeakerId(Long cospeakerId) {
-        this.cospeakerId = cospeakerId;
     }
 }

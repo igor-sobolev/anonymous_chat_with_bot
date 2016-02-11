@@ -9,14 +9,14 @@ import java.util.List;
 
 @Component
 public class ChatDaoImpl extends BaseDaoImpl<Chat> implements ChatDao{
-    public List<Integer> freeRooms() {
+    public List<Long> freeRooms() {
         Session session = getSession();
         Query query = session.createQuery(
                 "SELECT b.id FROM Cospeaker a, Chat b " +
                         "WHERE a.chat.id = b.id " +
                         "GROUP BY b.id " +
                         "HAVING COUNT(a.id)<2");
-        List<Integer> result = (List<Integer>) query.list();
+        List<Long> result = (List<Long>) query.list();
         return result;
     }
 }
