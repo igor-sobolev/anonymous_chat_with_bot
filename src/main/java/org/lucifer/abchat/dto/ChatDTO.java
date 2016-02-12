@@ -8,15 +8,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ChatDTO {
     private Long chatId;
-    private Long userId;
+    private String userLogin;
 
     public ChatDTO() {
 
-    }
-
-    public ChatDTO(Long chatId, Long userId) {
-        this.chatId = chatId;
-        this.userId = userId;
     }
 
     public Long getChatId() {
@@ -27,11 +22,11 @@ public class ChatDTO {
         this.chatId = chatId;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUserLogin() {
+        return userLogin;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
     }
 }

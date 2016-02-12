@@ -56,10 +56,10 @@
             });
         });
         var html = "<p style=\"font-size: large; \">";
-        html += "User: " + localStorage.getItem("userLogin");
+        html += "User: " + storage.userLogin;
         html += "</p>";
         $("#user-login").html(html);
-        $.get("/resources/html_templates/loading_dialog.html", function(data) {
+        $.get("/resources/html_templates/chat_logic.html", function(data) {
             $("#main-window").append(data);
         });
     });

@@ -13,12 +13,11 @@ import java.util.Set;
 @Entity
 @Table(name = "CHAT")
 public class Chat extends Identificator implements Serializable {
-    @OneToOne(mappedBy = "chat")
-    private Cospeaker cospeaker1;
+    @JsonIgnore
+    @OneToMany(mappedBy = "chat")
+    private Set<Cospeaker> cospeakers;
 
-    @OneToOne(mappedBy = "chat")
-    private Cospeaker cospeaker2;
-
+    @JsonIgnore
     @OneToOne(mappedBy = "chat")
     private UserAnswer answer;
 
@@ -30,25 +29,12 @@ public class Chat extends Identificator implements Serializable {
 
     }
 
-    public Chat(Cospeaker sp1, Cospeaker sp2) {
-        cospeaker1 = sp1;
-        cospeaker2 = sp2;
+    public Set<Cospeaker> getCospeakers() {
+        return cospeakers;
     }
 
-    public Cospeaker getCospeaker1() {
-        return cospeaker1;
-    }
-
-    public void setCospeaker1(Cospeaker cospeaker1) {
-        this.cospeaker1 = cospeaker1;
-    }
-
-    public Cospeaker getCospeaker2() {
-        return cospeaker2;
-    }
-
-    public void setCospeaker2(Cospeaker cospeaker2) {
-        this.cospeaker2 = cospeaker2;
+    public void setCospeakers(Set<Cospeaker> cospeakers) {
+        this.cospeakers = cospeakers;
     }
 
     public UserAnswer getAnswer() {

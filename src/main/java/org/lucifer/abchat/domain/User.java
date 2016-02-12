@@ -20,8 +20,9 @@ public class User extends Identificator implements Serializable {
     @Column(name = "EMAIL")
     private String email;
 
-    @OneToOne(mappedBy = "user")
-    private Cospeaker cospeaker;
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+    private Set<Cospeaker> cospeakers;
 
 
     @JsonIgnore
@@ -62,20 +63,20 @@ public class User extends Identificator implements Serializable {
         this.email = email;
     }
 
-    public Cospeaker getCospeaker() {
-        return cospeaker;
-    }
-
-    public void setCospeaker(Cospeaker cospeaker) {
-        this.cospeaker = cospeaker;
-    }
-
     public Set<UserAnswer> getAnswers() {
         return answers;
     }
 
     public void setAnswers(Set<UserAnswer> answers) {
         this.answers = answers;
+    }
+
+    public Set<Cospeaker> getCospeakers() {
+        return cospeakers;
+    }
+
+    public void setCospeakers(Set<Cospeaker> cospeakers) {
+        this.cospeakers = cospeakers;
     }
 
     @Override
@@ -85,17 +86,17 @@ public class User extends Identificator implements Serializable {
 
         User user = (User) o;
 
-        if (!login.equals(user.login)) return false;
-        if (!password.equals(user.password)) return false;
-        return email.equals(user.email);
+        if (login != null ? !login.equals(user.login) : user.login != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        return !(email != null ? !email.equals(user.email) : user.email != null);
 
     }
 
     @Override
     public int hashCode() {
-        int result = login.hashCode();
-        result = 31 * result + password.hashCode();
-        result = 31 * result + email.hashCode();
+        int result = login != null ? login.hashCode() : 0;
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
     }
 }

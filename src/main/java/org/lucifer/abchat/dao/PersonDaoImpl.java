@@ -21,8 +21,8 @@ public class PersonDaoImpl extends BaseDaoImpl<User> implements PersonDao {
     public boolean register(User user) {
         Session session = getSession();
         Query query = session.createQuery(
-                "select count(login) from User where login='"
-                        + user.getLogin() + "'");
+                "select count(login) from User where login=:login");
+        query.setParameter("login", user.getLogin());
         long result = (Long) query.uniqueResult();
         return result == 0;
     }
@@ -30,8 +30,8 @@ public class PersonDaoImpl extends BaseDaoImpl<User> implements PersonDao {
     public User findByLogin(String userLogin) {
         Session session = getSession();
         Query query = session.createQuery(
-                "from User where login='"
-                        + userLogin + "'");
+                "from User where login=:login");
+        query.setParameter("login", userLogin);
         User result = (User) query.uniqueResult();
         return result;
     }

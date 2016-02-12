@@ -27,4 +27,6 @@ public class Bot extends Identificator implements Serializable {
     public void setCospeaker(Cospeaker cospeaker) {
         this.cospeaker = cospeaker;
     }
+
+
 }

@@ -18,20 +18,13 @@ public class UserController {
     public
     @ResponseBody
     String register(User user) {
-        if (!personService.register(user)) {
-            return "Error";
-        }
-        personService.save(user);
-        return "Ok";
+        return personService.register(user);
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public
     @ResponseBody
     String login(User user) {
-        if (personService.logIn(user)) {
-            return "Ok";
-        }
-        return "Error";
+        return personService.logIn(user);
     }
 }

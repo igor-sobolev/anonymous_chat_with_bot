@@ -14,13 +14,13 @@ import java.util.Set;
 @Entity
 @Table(name = "COSPEAKER")
 public class Cospeaker extends Identificator implements Serializable {
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Bot bot;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Chat chat;
 
     @JsonIgnore
@@ -31,6 +31,9 @@ public class Cospeaker extends Identificator implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "target")
     private Set<Message> received;
 
+    @Column(name = "ONLINE")
+    Boolean online;
+
     public Cospeaker() {
 
     }
@@ -38,6 +41,7 @@ public class Cospeaker extends Identificator implements Serializable {
     public Cospeaker(User user, Bot bot) {
         this.user = user;
         this.bot = bot;
+        online = true;
     }
 
     public User getUser() {
@@ -78,5 +82,29 @@ public class Cospeaker extends Identificator implements Serializable {
 
     public void setReceived(Set<Message> received) {
         this.received = received;
+    }
+
+    public Boolean getOnline() {
+        return online;
+    }
+
+    public void setOnline(Boolean online) {
+        this.online = online;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Cospeaker cospeaker = (Cospeaker) o;
+
+        return !(user != null ? !user.equals(cospeaker.user) : cospeaker.user != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return user != null ? user.hashCode() : 0;
     }
 }

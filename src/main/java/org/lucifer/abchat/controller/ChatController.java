@@ -1,5 +1,6 @@
 package org.lucifer.abchat.controller;
 
+import org.lucifer.abchat.domain.Cospeaker;
 import org.lucifer.abchat.dto.ChatDTO;
 import org.lucifer.abchat.dto.UserDTO;
 import org.lucifer.abchat.service.ChatService;
@@ -21,7 +22,21 @@ public class ChatController {
     @RequestMapping(value = "/enter", method = RequestMethod.POST)
     public
     @ResponseBody
-    ChatDTO enter(UserDTO usr) {
+    Cospeaker enter(UserDTO usr) {
         return chatService.enter(usr);
+    }
+
+    @RequestMapping(value = "/cospeaker_entered", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    String cospeakerEntered(ChatDTO chat) {
+        return chatService.cospeakerEntered(chat);
+    }
+
+    @RequestMapping(value = "/online", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    String online(ChatDTO chat) {
+        return chatService.online(chat);
     }
 }

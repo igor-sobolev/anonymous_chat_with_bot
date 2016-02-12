@@ -1,5 +1,7 @@
 package org.lucifer.abchat.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.persistence.criteria.Fetch;
 import java.io.Serializable;

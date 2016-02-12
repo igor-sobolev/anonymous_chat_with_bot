@@ -10,14 +10,21 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class PersonServiceImpl extends BaseServiceImpl<User> implements PersonService {
-    public boolean logIn(User user) {
+    public String logIn(User user) {
         PersonDao dao = (PersonDao) this.dao;
-        return dao.logIn(user);
+        if (dao.logIn(user)) {
+            return "Ok";
+        }
+        return "Error";
     }
 
-    public boolean register(User user) {
+    public String register(User user) {
         PersonDao dao = (PersonDao) this.dao;
-        return dao.register(user);
+        if (dao.register(user)) {
+            dao.save(user);
+            return "Ok";
+        }
+        return "Error";
     }
 
     public User findByLogin(String userLogin) {
