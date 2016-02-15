@@ -1,20 +1,25 @@
 package org.lucifer.abchat.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "MESSAGE")
 public class Message extends Identificator implements Serializable {
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
     private Chat chat;
 
     @Column(name = "MESSAGE")
     private String message;
 
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
     private Cospeaker source;
 
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
     private Cospeaker target;
     

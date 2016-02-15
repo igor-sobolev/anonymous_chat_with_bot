@@ -3,16 +3,15 @@ package org.lucifer.abchat.service;
 import org.lucifer.abchat.dao.ChatDao;
 import org.lucifer.abchat.dao.CospeakerDao;
 import org.lucifer.abchat.dao.MessageDao;
-import org.lucifer.abchat.domain.Bot;
-import org.lucifer.abchat.domain.Chat;
-import org.lucifer.abchat.domain.Cospeaker;
-import org.lucifer.abchat.domain.User;
+import org.lucifer.abchat.domain.*;
 import org.lucifer.abchat.dto.ChatDTO;
+import org.lucifer.abchat.dto.MessageDTO;
 import org.lucifer.abchat.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -65,7 +64,7 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
             return userCospeaker;
         }
 
-        Chat chat = new Chat();
+        Chat chat = new Chat();                                                 //new chatroom for only users
         userCospeaker.setChat(chat);
         cospeakerDao.save(userCospeaker);
         return userCospeaker;
@@ -75,31 +74,55 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
         ChatDao dao = (ChatDao) this.dao;
         Chat chat = dao.findById(c.getChatId());
         if (chat.getCospeakers().size() == 2) {
-            return "Ok";
+            return "Ok";                                                        //users can chat now
         }
         return "No";
     }
 
-    public String online(ChatDTO ch) {
-        User user = personService.findByLogin(ch.getUserLogin());
-        Chat chat = dao.findById(ch.getChatId());
+    public String message(MessageDTO msg) {
+        ChatDao dao = (ChatDao) this.dao;
+        Chat chat = dao.findById(msg.getChatId());
         Set<Cospeaker> cospeakers = chat.getCospeakers();
-        for (Cospeaker csp : cospeakers) {
-            if (user.equals(csp.getUser())) {
-                csp.setOnline(true);
-                cospeakerDao.save(csp);
+        Cospeaker source = null, target = null;
+        for (Cospeaker csp : cospeakers) {                                      //find target and source for msg
+            if (csp.getBot() == null) {
+                if (csp.getUser().getLogin().equals(msg.getUserLogin())) {
+                    source = csp;
+                } else {
+                    target = csp;
+                }
             } else {
-                if (csp.getUser() == null) {
-                    return "Online";
-                }
-                if (csp.getOnline().equals(false)) {
-                    return "Offline";
-                }
-                csp.setOnline(false);
-                cospeakerDao.save(csp);
+                target = csp;
             }
         }
-        return "Online";
+        Message message = new Message();
+        message.setChat(chat);
+        message.setSource(source);
+        message.setTarget(target);
+        message.setMessage(msg.getMessage());
+        messageDao.save(message);                                               //message is ready
+        return "Ok";
     }
 
+    public List<MessageDTO> receive(ChatDTO ch) {                               //return list of message for user
+        ChatDao dao = (ChatDao) this.dao;
+        Chat chat = dao.findById(ch.getChatId());
+        Set<Cospeaker> cospeakers = chat.getCospeakers();
+        Set<Message> messages = null;
+        for(Cospeaker csp : cospeakers) {
+            if (csp.getBot() == null) {
+                if (csp.getUser().getLogin().equals(ch.getUserLogin())) {
+                    messages = csp.getReceived();
+                }
+            }
+        }
+        List <MessageDTO> list = new ArrayList<MessageDTO>();                   //place messages in DTO object and send to user
+        for(Message m : messages) {
+            MessageDTO md = new MessageDTO();
+            md.setMessage(m.getMessage());
+            md.setId(m.getId());
+            list.add(md);
+        }
+        return list;
+    }
 }

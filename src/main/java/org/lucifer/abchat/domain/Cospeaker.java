@@ -31,9 +31,6 @@ public class Cospeaker extends Identificator implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "target")
     private Set<Message> received;
 
-    @Column(name = "ONLINE")
-    Boolean online;
-
     public Cospeaker() {
 
     }
@@ -41,7 +38,6 @@ public class Cospeaker extends Identificator implements Serializable {
     public Cospeaker(User user, Bot bot) {
         this.user = user;
         this.bot = bot;
-        online = true;
     }
 
     public User getUser() {
@@ -82,14 +78,6 @@ public class Cospeaker extends Identificator implements Serializable {
 
     public void setReceived(Set<Message> received) {
         this.received = received;
-    }
-
-    public Boolean getOnline() {
-        return online;
-    }
-
-    public void setOnline(Boolean online) {
-        this.online = online;
     }
 
     @Override

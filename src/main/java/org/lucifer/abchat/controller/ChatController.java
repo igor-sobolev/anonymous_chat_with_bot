@@ -2,6 +2,7 @@ package org.lucifer.abchat.controller;
 
 import org.lucifer.abchat.domain.Cospeaker;
 import org.lucifer.abchat.dto.ChatDTO;
+import org.lucifer.abchat.dto.MessageDTO;
 import org.lucifer.abchat.dto.UserDTO;
 import org.lucifer.abchat.service.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * Created by PiCy on 2/9/2016.
@@ -33,10 +36,17 @@ public class ChatController {
         return chatService.cospeakerEntered(chat);
     }
 
-    @RequestMapping(value = "/online", method = RequestMethod.POST)
+    @RequestMapping(value = "/message", method = RequestMethod.POST)
     public
     @ResponseBody
-    String online(ChatDTO chat) {
-        return chatService.online(chat);
+    String message(MessageDTO msg) {
+        return chatService.message(msg);
+    }
+
+    @RequestMapping(value = "/receive", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    List<MessageDTO> receive(ChatDTO ch) {
+        return chatService.receive(ch);
     }
 }

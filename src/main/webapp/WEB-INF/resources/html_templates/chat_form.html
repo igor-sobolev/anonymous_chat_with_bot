@@ -35,7 +35,7 @@
                 <input id="msg-text" type="text" style="width: 100%;">
             </td>
             <td>
-                <button id="send" style="width: 100%;">Отправить</button>
+                <button id="send-message" style="width: 100%;">Отправить</button>
             </td>
             <td>
 
@@ -43,24 +43,4 @@
         </tr>
     </table>
 </div>
-<script type="text/javascript">
-    $(document).ready(function() {
-        var $logoff = $("#logoff");
-        $logoff.button();
-        $("#bot").button();
-        $("#not").button();
-        $("#send").button();
-        $logoff.click(function() {
-            $.get("/resources/html_templates/welcome_form.html", function(data) {
-                $("#main-window").html(data);
-            });
-        });
-        var html = "<p style=\"font-size: large; \">";
-        html += "User: " + storage.userLogin;
-        html += "</p>";
-        $("#user-login").html(html);
-        $.get("/resources/html_templates/chat_logic.html", function(data) {
-            $("#main-window").append(data);
-        });
-    });
-</script>
+<script src="/resources/js/chat.js"></script>

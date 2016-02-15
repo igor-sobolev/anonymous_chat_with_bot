@@ -11,11 +11,17 @@ import java.util.List;
 public class ChatDaoImpl extends BaseDaoImpl<Chat> implements ChatDao{
     public List<Long> freeRooms() {
         Session session = getSession();
-        Query query = session.createQuery(
-                "SELECT b.id FROM Cospeaker a, Chat b " +
+        /*
+        "SELECT b.id FROM Cospeaker a, Chat b " +
                         "WHERE a.chat.id = b.id " +
                         "GROUP BY b.id " +
-                        "HAVING COUNT(a.id)<2");
+                        "HAVING COUNT(a.id)<2"
+         */
+        Query query = session.createQuery("SELECT c.id " +
+                "FROM Chat c " +
+                "WHERE (SELECT COUNT(co.id) " +
+                "FROM Cospeaker co " +
+                "WHERE co.chat.id = c.id) < 2");
         List<Long> result = (List<Long>) query.list();
         return result;
     }
