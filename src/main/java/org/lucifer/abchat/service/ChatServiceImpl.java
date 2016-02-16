@@ -27,6 +27,9 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
     @Autowired
     PersonService personService;
 
+    @Autowired
+    BotService botService;
+
     public Cospeaker enter(UserDTO usr) {
         ChatDao dao = (ChatDao) this.dao;
         List<Long> free = dao.freeRooms();                                      //id of free rooms (1 cospeaker)
@@ -118,10 +121,12 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
         }
         List <MessageDTO> list = new ArrayList<MessageDTO>();                   //place messages in DTO object and send to user
         for(Message m : messages) {
-            MessageDTO md = new MessageDTO();
-            md.setMessage(m.getMessage());
-            md.setId(m.getId());
-            list.add(md);
+            if (m.getId() > ch.getMaxMessageId()) {
+                MessageDTO md = new MessageDTO();
+                md.setMessage(m.getMessage());
+                md.setId(m.getId());
+                list.add(md);
+            }
         }
         return list;
     }

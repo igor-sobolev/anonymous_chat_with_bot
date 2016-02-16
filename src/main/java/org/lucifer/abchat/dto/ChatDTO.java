@@ -8,10 +8,19 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ChatDTO {
     private Long chatId;
+    private Long maxMessageId;
     private String userLogin;
 
     public ChatDTO() {
 
+    }
+
+    public Long getMaxMessageId() {
+        return maxMessageId;
+    }
+
+    public void setMaxMessageId(Long maxMessageId) {
+        this.maxMessageId = maxMessageId;
     }
 
     public Long getChatId() {
