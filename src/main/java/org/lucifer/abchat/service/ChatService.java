@@ -8,9 +8,6 @@ import org.lucifer.abchat.dto.UserDTO;
 
 import java.util.List;
 
-/**
- * Created by PiCy on 2/9/2016.
- */
 public interface ChatService extends  BaseService<Chat> {
     Cospeaker enter(UserDTO usr);
 
@@ -19,4 +16,8 @@ public interface ChatService extends  BaseService<Chat> {
     String message(MessageDTO msg);
 
     List<MessageDTO> receive(ChatDTO ch);
+
+    String bot(ChatDTO ch);
+
+    String nobot(ChatDTO ch);
 }

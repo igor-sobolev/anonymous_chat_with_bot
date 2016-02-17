@@ -15,4 +15,29 @@ public class MessageLink extends  Identificator {
 
     @Column(name = "MESSAGE")
     private String message;
+
+    public MessageLink() {
+
+    }
+
+    public MessageLink(String stimulus, String message) {
+        this.stimulus = stimulus;
+        this.message = message;
+    }
+
+    public String getStimulus() {
+        return stimulus;
+    }
+
+    public void setStimulus(String stimulus) {
+        this.stimulus = stimulus;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }

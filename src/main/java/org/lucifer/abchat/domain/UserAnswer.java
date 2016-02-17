@@ -16,7 +16,7 @@ public class UserAnswer extends Identificator implements Serializable {
     @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Chat chat;
 
     @Column(name = "ANSWER")

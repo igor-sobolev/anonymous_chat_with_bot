@@ -20,6 +20,9 @@ public class User extends Identificator implements Serializable {
     @Column(name = "EMAIL")
     private String email;
 
+    @Column(name = "SCORE")
+    private Long score;
+
     @JsonIgnore
     @OneToMany(mappedBy = "user")
     private Set<Cospeaker> cospeakers;
@@ -30,13 +33,14 @@ public class User extends Identificator implements Serializable {
     private Set<UserAnswer> answers;
 
     public User() {
-
+        this.score = 0L;
     }
 
     public User(String login, String password, String email) {
         this.login = login;
         this.password = password;
         this.email = email;
+        this.score = 0L;
     }
 
     public String getLogin() {
@@ -77,6 +81,14 @@ public class User extends Identificator implements Serializable {
 
     public void setCospeakers(Set<Cospeaker> cospeakers) {
         this.cospeakers = cospeakers;
+    }
+
+    public Long getScore() {
+        return score;
+    }
+
+    public void setScore(Long score) {
+        this.score = score;
     }
 
     @Override

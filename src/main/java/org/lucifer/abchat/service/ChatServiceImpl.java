@@ -3,6 +3,7 @@ package org.lucifer.abchat.service;
 import org.lucifer.abchat.dao.ChatDao;
 import org.lucifer.abchat.dao.CospeakerDao;
 import org.lucifer.abchat.dao.MessageDao;
+import org.lucifer.abchat.dao.UserAnswerDao;
 import org.lucifer.abchat.domain.*;
 import org.lucifer.abchat.dto.ChatDTO;
 import org.lucifer.abchat.dto.MessageDTO;
@@ -25,7 +26,10 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
     MessageDao messageDao;
 
     @Autowired
-    PersonService personService;
+    UserAnswerDao userAnswerDao;
+
+    @Autowired
+    UserService userService;
 
     @Autowired
     BotService botService;
@@ -33,7 +37,7 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
     public Cospeaker enter(UserDTO usr) {
         ChatDao dao = (ChatDao) this.dao;
         List<Long> free = dao.freeRooms();                                      //id of free rooms (1 cospeaker)
-        User user = personService.findByLogin(usr.getLogin());
+        User user = userService.findByLogin(usr.getLogin());
         Cospeaker userCospeaker = new Cospeaker(user, null);                    //cospeaker for entering user
 
         if (Math.random() > 0.5) {                                              //give bot for user
@@ -104,6 +108,13 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
         message.setTarget(target);
         message.setMessage(msg.getMessage());
         messageDao.save(message);                                               //message is ready
+
+        if (bothUsers(chat)) {
+            botService.remember(msg.getStimulus(), msg.getMessage());
+        } else {
+            Message botMessage = botService.message(msg);
+            if (botMessage != null) messageDao.save(botMessage);
+        }
         return "Ok";
     }
 
@@ -129,5 +140,53 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
             }
         }
         return list;
+    }
+
+    public String bot(ChatDTO ch) {
+        Chat chat = dao.findById(ch.getChatId());
+        User user = userService.findByLogin(ch.getUserLogin());
+        UserAnswer answer = new UserAnswer();
+        answer.setChat(chat);
+        answer.setUser(user);
+        if (bothUsers(chat)) {
+            answer.setAnswer(false);
+            userAnswerDao.save(answer);
+            userService.recountScore(user);
+            return "No";
+        }
+        answer.setAnswer(true);
+        userAnswerDao.save(answer);
+        userService.recountScore(user);
+        return "Yes";
+    }
+
+    public String nobot(ChatDTO ch) {
+        Chat chat = dao.findById(ch.getChatId());
+        User user = userService.findByLogin(ch.getUserLogin());
+        UserAnswer answer = new UserAnswer();
+        answer.setChat(chat);
+        answer.setUser(user);
+        if (bothUsers(chat)) {
+            answer.setAnswer(true);
+            userAnswerDao.save(answer);
+            userService.recountScore(user);
+            return "Yes";
+        }
+        answer.setAnswer(false);
+        userAnswerDao.save(answer);
+        userService.recountScore(user);
+        return "No";
+    }
+
+    protected boolean bothUsers(Chat c) {
+        if (c.getCospeakers().size() < 2) return false;
+        Set<Cospeaker> cospeakers = c.getCospeakers();
+        boolean both = true;
+        for (Cospeaker csp : cospeakers) {
+            if (csp.getUser() == null) {
+                both = false;
+            }
+        }
+        return both;
     }
 }

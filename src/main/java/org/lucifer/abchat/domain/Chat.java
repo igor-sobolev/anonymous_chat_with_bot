@@ -18,8 +18,8 @@ public class Chat extends Identificator implements Serializable {
     private Set<Cospeaker> cospeakers;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "chat")
-    private UserAnswer answer;
+    @OneToMany(mappedBy = "chat")
+    private Set<UserAnswer> answers;
 
     @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "chat")
@@ -37,12 +37,12 @@ public class Chat extends Identificator implements Serializable {
         this.cospeakers = cospeakers;
     }
 
-    public UserAnswer getAnswer() {
-        return answer;
+    public Set<UserAnswer> getAnswers() {
+        return answers;
     }
 
-    public void setAnswer(UserAnswer answer) {
-        this.answer = answer;
+    public void setAnswers(Set<UserAnswer> answers) {
+        this.answers = answers;
     }
 
     public Set<Message> getMessages() {

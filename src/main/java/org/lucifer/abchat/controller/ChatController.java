@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
-/**
- * Created by PiCy on 2/9/2016.
- */
 @Controller
 @RequestMapping(value = "/chat")
 public class ChatController {
@@ -48,5 +45,19 @@ public class ChatController {
     @ResponseBody
     List<MessageDTO> receive(ChatDTO ch) {
         return chatService.receive(ch);
+    }
+
+    @RequestMapping(value = "/bot", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    String bot(ChatDTO ch) {
+        return chatService.bot(ch);
+    }
+
+    @RequestMapping(value = "/nobot", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    String nobot(ChatDTO ch) {
+        return chatService.nobot(ch);
     }
 }
