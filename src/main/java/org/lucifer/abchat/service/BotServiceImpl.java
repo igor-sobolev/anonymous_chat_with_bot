@@ -16,11 +16,14 @@ import java.util.Set;
 @Service
 @Transactional
 public class BotServiceImpl extends BaseServiceImpl<Bot> implements BotService {
-    @Autowired
-    MessageLinkDao messageLinkDao;
+    public static final String OOPS = "Oops";
+    private static final double FIFTEEN_PERCENT = 0.15;
 
     @Autowired
-    ChatService chatService;
+    private MessageLinkDao messageLinkDao;
+
+    @Autowired
+    private ChatService chatService;
 
     public void remember(String stimulus, String message) {
         MessageLink ml = new MessageLink(stimulus, message);
@@ -39,13 +42,13 @@ public class BotServiceImpl extends BaseServiceImpl<Bot> implements BotService {
                 target = csp;
             }
         }
-        if (Math.random() < 0.15) return null;
+        if (Math.random() < FIFTEEN_PERCENT) return null;
         Message m = new Message();
         m.setChat(chat);
         m.setSource(source);
         m.setTarget(target);
         if (list.size() == 0) {
-            m.setMessage("Oops");
+            m.setMessage(OOPS);
             return m;
         } else {                                                                //TODO not random
             m.setMessage(list.get((int) (Math.random() * list.size())).getMessage());

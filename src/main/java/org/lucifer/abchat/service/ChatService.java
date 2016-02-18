@@ -11,13 +11,13 @@ import java.util.List;
 public interface ChatService extends  BaseService<Chat> {
     Cospeaker enter(UserDTO usr);
 
-    String cospeakerEntered(ChatDTO chat);
+    boolean cospeakerEntered(ChatDTO chat);
 
-    String message(MessageDTO msg);
+    void message(MessageDTO msg);
 
     List<MessageDTO> receive(ChatDTO ch);
 
-    String bot(ChatDTO ch);
+    boolean bot(ChatDTO ch);
 
-    String nobot(ChatDTO ch);
+    boolean noBot(ChatDTO ch);
 }

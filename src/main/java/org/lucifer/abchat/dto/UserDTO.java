@@ -6,14 +6,16 @@ package org.lucifer.abchat.dto;
 public class UserDTO {
     private String login;
     private String email;
+    private Long score;
 
     public UserDTO(){
 
     }
 
-    public UserDTO(String login, String email) {
+    public UserDTO(String login, String email, Long score) {
         this.login = login;
         this.email = email;
+        this.score = score;
     }
 
     public String getLogin() {
@@ -30,5 +32,13 @@ public class UserDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Long getScore() {
+        return score;
+    }
+
+    public void setScore(Long score) {
+        this.score = score;
     }
 }

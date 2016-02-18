@@ -10,7 +10,7 @@ $(document).ready(function() {
         closeOnEscape: false,
         close: function() {
             $(this).dialog("destroy").remove();
-        },
+        }
     });
 
     var user = {
@@ -38,15 +38,16 @@ $(document).ready(function() {
                 chatId: storage.chatId
             };
             $.ajax({
-                url: "/chat/cospeaker_entered",
+                url: "/chat/cospeaker/entered",
                 type: "POST",
-                dataType: "text",
+                dataType: "json",
                 data: chat,
                 success: function(callback) {                                   //close dialog and notify user
-                    if (callback == "Ok") {
+                    if (callback) {
                         var $window = $("#chat-window");
                         $window.text($window.val() + "\nX вошел!");
                         clearInterval(getCospeakerInterval);
+                        storage.chatBegan = true;
                         $("#loading-dialog").dialog("close");
                     }
                 },

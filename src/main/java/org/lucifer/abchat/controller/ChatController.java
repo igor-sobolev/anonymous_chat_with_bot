@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping(value = "/chat")
 public class ChatController {
     @Autowired
-    ChatService chatService;
+    private ChatService chatService;
 
     @RequestMapping(value = "/enter", method = RequestMethod.POST)
     public
@@ -26,18 +26,18 @@ public class ChatController {
         return chatService.enter(usr);
     }
 
-    @RequestMapping(value = "/cospeaker_entered", method = RequestMethod.POST)
+    @RequestMapping(value = "/cospeaker/entered", method = RequestMethod.POST)
     public
     @ResponseBody
-    String cospeakerEntered(ChatDTO chat) {
+    boolean cospeakerEntered(ChatDTO chat) {
         return chatService.cospeakerEntered(chat);
     }
 
     @RequestMapping(value = "/message", method = RequestMethod.POST)
     public
     @ResponseBody
-    String message(MessageDTO msg) {
-        return chatService.message(msg);
+    void message(MessageDTO msg) {
+        chatService.message(msg);
     }
 
     @RequestMapping(value = "/receive", method = RequestMethod.POST)
@@ -50,14 +50,14 @@ public class ChatController {
     @RequestMapping(value = "/bot", method = RequestMethod.POST)
     public
     @ResponseBody
-    String bot(ChatDTO ch) {
+    boolean bot(ChatDTO ch) {
         return chatService.bot(ch);
     }
 
     @RequestMapping(value = "/nobot", method = RequestMethod.POST)
     public
     @ResponseBody
-    String nobot(ChatDTO ch) {
-        return chatService.nobot(ch);
+    boolean noBot(ChatDTO ch) {
+        return chatService.noBot(ch);
     }
 }

@@ -4,6 +4,7 @@ package org.lucifer.abchat.service;
 import org.lucifer.abchat.dao.UserDao;
 import org.lucifer.abchat.domain.User;
 import org.lucifer.abchat.domain.UserAnswer;
+import org.lucifer.abchat.dto.UserDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,22 +14,24 @@ import java.util.List;
 @Service
 @Transactional
 public class UserServiceImpl extends BaseServiceImpl<User> implements UserService {
+    public static final int WIN_POINTS = 10;
+    public static final int LOSE_POINTS = 15;
 
-    public String logIn(User user) {
+    public UserDTO logIn(User user) {
         UserDao dao = (UserDao) this.dao;
         if (dao.logIn(user)) {
-            return "Ok";
+            return new UserDTO(user.getLogin(), user.getEmail(), user.getScore());
         }
-        return "Error";
+        return null;
     }
 
-    public String register(User user) {
+    public boolean register(User user) {
         UserDao dao = (UserDao) this.dao;
         if (dao.register(user)) {
             dao.save(user);
-            return "Ok";
+            return true;
         }
-        return "Error";
+        return false;
     }
 
     public User findByLogin(String userLogin) {
@@ -40,9 +43,9 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         Long score = 0L;
         for (UserAnswer ans : user.getAnswers()) {
             if (ans.getAnswer().equals(true)) {
-                score += 10;
+                score += WIN_POINTS;
             } else {
-                score -= 15;
+                score -= LOSE_POINTS;
             }
         }
         if (score < 0) score = 0L;
@@ -53,5 +56,10 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     public List<User> top() {
         UserDao dao = (UserDao) this.dao;
         return dao.top();
+    }
+
+    public UserDTO get(String login) {
+        User user = findByLogin(login);
+        return new UserDTO(user.getLogin(), user.getEmail(), user.getScore());
     }
 }

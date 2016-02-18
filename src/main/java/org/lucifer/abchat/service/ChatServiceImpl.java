@@ -19,37 +19,42 @@ import java.util.Set;
 @Service
 @Transactional
 public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatService {
-    @Autowired
-    CospeakerDao cospeakerDao;
+    public static final double FIFTY_PERCENT = 0.5;
+    private static final int FULL_CHATROOM = 2;
 
     @Autowired
-    MessageDao messageDao;
+    private CospeakerDao cospeakerDao;
 
     @Autowired
-    UserAnswerDao userAnswerDao;
+    private MessageDao messageDao;
 
     @Autowired
-    UserService userService;
+    private UserAnswerDao userAnswerDao;
 
     @Autowired
-    BotService botService;
+    private UserService userService;
 
-    public Cospeaker enter(UserDTO usr) {
+    @Autowired
+    private BotService botService;
+
+    private Cospeaker giveBot(UserDTO usr) {
+        User user = userService.findByLogin(usr.getLogin());
+        Cospeaker userCospeaker = new Cospeaker(user, null);                    //cospeaker for entering user
+        Chat chat = new Chat();
+        userCospeaker.setChat(chat);
+        Bot bot = new Bot();
+        Cospeaker botCospeaker = new Cospeaker(null, bot);
+        botCospeaker.setChat(chat);
+        cospeakerDao.save(userCospeaker);
+        cospeakerDao.save(botCospeaker);
+        return userCospeaker;
+    }
+
+    private boolean oneInChat(UserDTO usr) {
         ChatDao dao = (ChatDao) this.dao;
         List<Long> free = dao.freeRooms();                                      //id of free rooms (1 cospeaker)
         User user = userService.findByLogin(usr.getLogin());
         Cospeaker userCospeaker = new Cospeaker(user, null);                    //cospeaker for entering user
-
-        if (Math.random() > 0.5) {                                              //give bot for user
-            Chat chat = new Chat();
-            userCospeaker.setChat(chat);
-            Bot bot = new Bot();
-            Cospeaker botCospeaker = new Cospeaker(null, bot);
-            botCospeaker.setChat(chat);
-            cospeakerDao.save(userCospeaker);
-            cospeakerDao.save(botCospeaker);
-            return userCospeaker;
-        }
         boolean oneInChat = true;                                               //if user only 1 in free chatrooms create new
         for (Long fid : free) {
             Chat room = dao.findById(fid);
@@ -60,54 +65,85 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
                 }
             }
         }
-        if (free.size() != 0 && !oneInChat) {
-            Chat randomRoom;
-            do {
-                Long randomRoomId = free.get((int) (Math.random() * free.size()));
-                randomRoom = dao.findById(randomRoomId);
-            } while (randomRoom.getCospeakers().contains(userCospeaker));
-            userCospeaker.setChat(randomRoom);
-            cospeakerDao.save(userCospeaker);
-            return userCospeaker;
-        }
+        return oneInChat;
+    }
 
+    public Cospeaker enter(UserDTO usr) {
+        if (Math.random() > FIFTY_PERCENT) {                                              //give bot for user
+            return giveBot(usr);
+        }
+        if (!oneInChat(usr)) {
+            return putToRandom(usr);
+        }
+        return createNewRoom(usr);
+    }
+
+    private Cospeaker createNewRoom(UserDTO usr) {
+        User user = userService.findByLogin(usr.getLogin());
+        Cospeaker userCospeaker = new Cospeaker(user, null);                    //cospeaker for entering user
         Chat chat = new Chat();                                                 //new chatroom for only users
         userCospeaker.setChat(chat);
         cospeakerDao.save(userCospeaker);
         return userCospeaker;
     }
 
-    public String cospeakerEntered(ChatDTO c) {
+    private Cospeaker putToRandom(UserDTO usr) {
         ChatDao dao = (ChatDao) this.dao;
-        Chat chat = dao.findById(c.getChatId());
-        if (chat.getCospeakers().size() == 2) {
-            return "Ok";                                                        //users can chat now
-        }
-        return "No";
+        List<Long> free = dao.freeRooms();                                      //id of free rooms (1 cospeaker)
+        if (free.size() == 0) return null;
+        User user = userService.findByLogin(usr.getLogin());
+        Cospeaker userCospeaker = new Cospeaker(user, null);                    //cospeaker for entering user
+        Chat randomRoom;
+        do {
+            Long randomRoomId = free.get((int) (Math.random() * free.size()));
+            randomRoom = dao.findById(randomRoomId);
+        } while (randomRoom.getCospeakers().contains(userCospeaker));
+        userCospeaker.setChat(randomRoom);
+        cospeakerDao.save(userCospeaker);
+        return userCospeaker;
     }
 
-    public String message(MessageDTO msg) {
+    public boolean cospeakerEntered(ChatDTO c) {
         ChatDao dao = (ChatDao) this.dao;
+        Chat chat = dao.findById(c.getChatId());
+        if (chat.getCospeakers().size() == FULL_CHATROOM) {
+            return true;                                                        //users can chat now
+        }
+        return false;
+    }
+
+    private Cospeaker getSource(MessageDTO msg) {
         Chat chat = dao.findById(msg.getChatId());
         Set<Cospeaker> cospeakers = chat.getCospeakers();
-        Cospeaker source = null, target = null;
         for (Cospeaker csp : cospeakers) {                                      //find target and source for msg
             if (csp.getBot() == null) {
                 if (csp.getUser().getLogin().equals(msg.getUserLogin())) {
-                    source = csp;
-                } else {
-                    target = csp;
+                    return csp;
                 }
-            } else {
-                target = csp;
             }
         }
-        Message message = new Message();
-        message.setChat(chat);
-        message.setSource(source);
-        message.setTarget(target);
-        message.setMessage(msg.getMessage());
-        messageDao.save(message);                                               //message is ready
+        return null;
+    }
+
+    private Cospeaker getTarget(MessageDTO msg) {
+        Chat chat = dao.findById(msg.getChatId());
+        Set<Cospeaker> cospeakers = chat.getCospeakers();
+        for (Cospeaker csp : cospeakers) {                                      //find target and source for msg
+            if (csp.getBot() == null) {
+                if (!csp.getUser().getLogin().equals(msg.getUserLogin())) {
+                    return csp;
+                }
+            } else {
+                return csp;
+            }
+        }
+        return null;
+    }
+
+    public void message(MessageDTO msg) {
+        Chat chat = dao.findById(msg.getChatId());
+        messageDao.save(new Message(chat, msg.getMessage(), getSource(msg),
+                getTarget(msg)));                                               //message is ready
 
         if (bothUsers(chat)) {
             botService.remember(msg.getStimulus(), msg.getMessage());
@@ -115,7 +151,6 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
             Message botMessage = botService.message(msg);
             if (botMessage != null) messageDao.save(botMessage);
         }
-        return "Ok";
     }
 
     public List<MessageDTO> receive(ChatDTO ch) {                               //return list of message for user
@@ -130,9 +165,13 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
                 }
             }
         }
+        return messagesToDTO(messages, ch.getMaxMessageId());
+    }
+
+    private List<MessageDTO> messagesToDTO(Set<Message> messages, Long maxId) {
         List <MessageDTO> list = new ArrayList<MessageDTO>();                   //place messages in DTO object and send to user
         for(Message m : messages) {
-            if (m.getId() > ch.getMaxMessageId()) {
+            if (m.getId() > maxId) {
                 MessageDTO md = new MessageDTO();
                 md.setMessage(m.getMessage());
                 md.setId(m.getId());
@@ -142,40 +181,30 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
         return list;
     }
 
-    public String bot(ChatDTO ch) {
+    public boolean bot(ChatDTO ch) {
         Chat chat = dao.findById(ch.getChatId());
         User user = userService.findByLogin(ch.getUserLogin());
-        UserAnswer answer = new UserAnswer();
-        answer.setChat(chat);
-        answer.setUser(user);
         if (bothUsers(chat)) {
-            answer.setAnswer(false);
-            userAnswerDao.save(answer);
+            userAnswerDao.save(new UserAnswer(user, chat, false));
             userService.recountScore(user);
-            return "No";
+            return false;
         }
-        answer.setAnswer(true);
-        userAnswerDao.save(answer);
+        userAnswerDao.save(new UserAnswer(user, chat, true));
         userService.recountScore(user);
-        return "Yes";
+        return true;
     }
 
-    public String nobot(ChatDTO ch) {
+    public boolean noBot(ChatDTO ch) {
         Chat chat = dao.findById(ch.getChatId());
         User user = userService.findByLogin(ch.getUserLogin());
-        UserAnswer answer = new UserAnswer();
-        answer.setChat(chat);
-        answer.setUser(user);
         if (bothUsers(chat)) {
-            answer.setAnswer(true);
-            userAnswerDao.save(answer);
+            userAnswerDao.save(new UserAnswer(user, chat, true));
             userService.recountScore(user);
-            return "Yes";
+            return true;
         }
-        answer.setAnswer(false);
-        userAnswerDao.save(answer);
+        userAnswerDao.save(new UserAnswer(user, chat, false));
         userService.recountScore(user);
-        return "No";
+        return false;
     }
 
     protected boolean bothUsers(Chat c) {

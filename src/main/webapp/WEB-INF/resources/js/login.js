@@ -20,17 +20,19 @@ $(document).ready(function() {
                         $.ajax({                                                //check user
                             url: "/users/login",
                             type: "POST",
-                            dataType: "text",
+                            dataType: "json",
                             data: data,
                             success: function(callback) {
                                 html = "";
-                                if (callback == "Ok") {
-                                    storage.userLogin = data.login;
+                                if (callback) {
+                                    storage.userLogin = callback.login;
+                                    storage.score = callback.score;
+                                    storage.email = callback.email;
                                     $("#login-dialog").dialog("close");
                                     $.get("/resources/html_templates/chat_form.html", function(data) {
                                         $("#main-window").html(data);
                                     });
-                                } else if (callback == "Error") {
+                                } else {
                                     html = errorMessage("Неправильный логин или пароль!");
                                     $("#message").html(html);
                                 }

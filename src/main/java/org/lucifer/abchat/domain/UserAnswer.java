@@ -26,6 +26,12 @@ public class UserAnswer extends Identificator implements Serializable {
 
     }
 
+    public UserAnswer(User user, Chat chat, Boolean answer) {
+        this.user = user;
+        this.chat = chat;
+        this.answer = answer;
+    }
+
     public User getUser() {
         return user;
     }

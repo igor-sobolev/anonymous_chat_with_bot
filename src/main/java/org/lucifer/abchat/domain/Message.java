@@ -27,6 +27,13 @@ public class Message extends Identificator implements Serializable {
 
     }
 
+    public Message(Chat chat, String message, Cospeaker source, Cospeaker target) {
+        this.chat = chat;
+        this.message = message;
+        this.source = source;
+        this.target = target;
+    }
+
     public Chat getChat() {
         return chat;
     }
