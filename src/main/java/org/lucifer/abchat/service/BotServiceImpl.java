@@ -147,8 +147,4 @@ public class BotServiceImpl extends BaseServiceImpl<Bot> implements BotService {
         }
         return null;
     }
-
-    public static void main(String[] args) {
-        System.out.println(new BotServiceImpl().tanimoto("Владимир путин", "вовка ПУТЛЕР"));
-    }
 }
