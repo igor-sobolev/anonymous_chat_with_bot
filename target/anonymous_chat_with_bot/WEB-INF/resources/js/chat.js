@@ -1,6 +1,7 @@
 $(document).ready(function() {
     storage.messages = [];                                                      //list of messages of current chat
     storage.maxId = 0;
+    storage.chatBegan = false;
     var $tabs = $("#tabs");
     var $logoff = $("#logoff");
     var $bot = $("#bot");
@@ -19,6 +20,22 @@ $(document).ready(function() {
         });
         clearInterval(intervalForReceivingMessages);
     });
+    var fillUser = function() {
+        $.ajax({
+            url: "/users/get/" + storage.userLogin,
+            type: "GET",
+            dataType: "json",
+            success: function(user) {
+                var html = "<p style=\"font-size: large; \">";
+                html += "Пользователь: " + user.login + " Счет: " + user.score;
+                html += "</p>";
+                $("#user-login").html(html);
+            },
+            error: function() {
+                console.log("error refreshing user");
+            }
+        });
+    };
     var getTop10 = function() {
         $.ajax({
             url: "/users/top",
@@ -46,12 +63,9 @@ $(document).ready(function() {
             }
         });
     };
-    $tabs.click(function() {
-        getTop10();
-    });
     $bot.click(function() {                                                  //go to welcome form
-        $bot.prop("disabled",true);
-        $nobot.prop("disabled",true);
+        $bot.prop("disabled", true);
+        $nobot.prop("disabled", true);
         var chat = {
             userLogin: storage.userLogin,
             chatId: storage.chatId
@@ -59,10 +73,10 @@ $(document).ready(function() {
         $.ajax({
             url: "/chat/bot",
             type: "POST",
-            dataType: "text",
+            dataType: "json",
             data: chat,
             success: function(callback) {
-                if (callback == "Yes") {
+                if (callback) {
                     $("#main-window").append("<div id=\"result\">Поздравляем! Вы совершенно правы!</div>");
                     $("#result").dialog({
                         title: "Победа",
@@ -101,6 +115,8 @@ $(document).ready(function() {
                         ]
                     });
                 }
+                getTop10();
+                fillUser();
             },
             error: function() {
                 console.log("error resulting");
@@ -108,8 +124,8 @@ $(document).ready(function() {
         });
     });
     $nobot.click(function() {                                                  //go to welcome form
-        $bot.prop("disabled",true);
-        $nobot.prop("disabled",true);
+        $bot.prop("disabled", true);
+        $nobot.prop("disabled", true);
         var chat = {
             userLogin: storage.userLogin,
             chatId: storage.chatId
@@ -117,10 +133,10 @@ $(document).ready(function() {
         $.ajax({
             url: "/chat/nobot",
             type: "POST",
-            dataType: "text",
+            dataType: "json",
             data: chat,
             success: function(callback) {
-                if (callback == "Yes") {
+                if (callback) {
                     $("#main-window").append("<div id=\"result\">Поздравляем! Вы совершенно правы!</div>");
                     $("#result").dialog({
                         title: "Победа",
@@ -159,6 +175,8 @@ $(document).ready(function() {
                         ]
                     });
                 }
+                getTop10();
+                fillUser();
             },
             error: function() {
                 console.log("error resulting");
@@ -189,7 +207,7 @@ $(document).ready(function() {
         });
         var chosen = false;
         var stimulus;
-        for (var i = storage.messages.length - 1; i > 0; i--) {
+        for (var i = storage.messages.length - 1; i >= 0; i--) {
             if (!chosen && storage.messages[i].sender == "X") {
                 chosen = true;
                 stimulus = storage.messages[i].message;
@@ -207,7 +225,6 @@ $(document).ready(function() {
         $.ajax({
             url: "/chat/message",
             type: "POST",
-            dataType: "text",
             data: messageForAjax,
             error: function() {
                 console.log("error sending message");
@@ -221,45 +238,52 @@ $(document).ready(function() {
         }
     });
     $sendMessage.click(send);                                                   //click-send
-    var html = "<p style=\"font-size: large; \">";
-    html += "User: " + storage.userLogin;
-    html += "</p>";
-    $("#user-login").html(html);
     $.get("/resources/html_templates/chat_loading.html", function(data) {
         $("#main-window").append(data);
-    });                                                                         //loading dialog and functionality
-    var intervalForReceivingMessages = setInterval(function() {                 //receiving messages from server
-        var chat = {
-            userLogin: storage.userLogin,
-            chatId: storage.chatId,
-            maxMessageId: storage.maxId
-        };
-        $.ajax({
-            url: "/chat/receive",
-            type: "POST",
-            dataType: "json",
-            data: chat,
-            success: function(list) {
-                list.sort(function(a, b) {
-                    return a.id - b.id;
-                });
-                $.each(list, function(index) {
-                    if (storage.maxId < list[index].id) {
-                        storage.maxId = list[index].id;
-                    }
-                    var msg = list[index].message;
-                    var $window = $("#chat-window");
-                    $window.val($window.val() + "\n" + "X: " + msg);    //add message to chat
-                    storage.messages.push({
-                        sender: "X",
-                        message: msg
+    });
+    var intervalForReceivingMessages;                                           //loading dialog and functionality
+    var receiveMessages = function() {
+        intervalForReceivingMessages = setInterval(function() {                 //receiving messages from server
+            var chat = {
+                userLogin: storage.userLogin,
+                chatId: storage.chatId,
+                maxMessageId: storage.maxId
+            };
+            $.ajax({
+                url: "/chat/receive",
+                type: "POST",
+                dataType: "json",
+                data: chat,
+                success: function(list) {
+                    list.sort(function(a, b) {
+                        return a.id - b.id;
                     });
-                });
-                scrollToBottom();
-            },
-            error: function() {
-                console.log("error receiving messages");
-            }
-        });
-    }, 4000);
+                    $.each(list, function(index) {
+                        if (storage.maxId < list[index].id) {
+                            storage.maxId = list[index].id;
+                        }
+                        var msg = list[index].message;
+                        var $window = $("#chat-window");
+                        $window.val($window.val() + "\n" + "X: " + msg);    //add message to chat
+                        storage.messages.push({
+                            sender: "X",
+                            message: msg
+                        });
+                        scrollToBottom();
+                    });
+                },
+                error: function() {
+                    console.log("error receiving messages");
+                }
+            });
+        }, 4000);
+    };
+    var checkForChatStarted = setInterval(function() {
+        if (storage.chatBegan) {
+            clearInterval(checkForChatStarted);
+            receiveMessages();
+        }
+    }, 1000);
+    getTop10();
+    fillUser();
 });

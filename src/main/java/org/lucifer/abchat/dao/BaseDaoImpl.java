@@ -39,7 +39,7 @@ public abstract class BaseDaoImpl<Entity extends Identificator> implements BaseD
         return query.list();
     }
 
-    public List<Entity> getList(Long page) {
+    public List<Entity> getPage(Long page) {
         Session session = getSession();
         Query query = session.createQuery("FROM " + getType().getSimpleName());
         final long limitResultsPerPage = 10;

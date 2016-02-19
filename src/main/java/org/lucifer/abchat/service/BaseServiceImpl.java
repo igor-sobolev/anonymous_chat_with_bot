@@ -20,8 +20,8 @@ public abstract class BaseServiceImpl<Entity extends Identificator> implements B
         return dao.getAll();
     }
 
-    public List<Entity> getList(Long page) {
-        return dao.getList(page);
+    public List<Entity> getPage(Long page) {
+        return dao.getPage(page);
     }
 
     public Entity delete(Long id) {

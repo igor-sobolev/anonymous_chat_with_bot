@@ -12,7 +12,7 @@ public interface BaseDao<Entity extends Identificator> {
 
     List<Entity> getAll();
 
-    List<Entity> getList(Long page);
+    List<Entity> getPage(Long page);
 
     Entity findById(Long id);
 }

@@ -64,8 +64,8 @@ $(document).ready(function() {
         });
     };
     $bot.click(function() {                                                  //go to welcome form
-        $bot.prop("disabled",true);
-        $nobot.prop("disabled",true);
+        $bot.prop("disabled", true);
+        $nobot.prop("disabled", true);
         var chat = {
             userLogin: storage.userLogin,
             chatId: storage.chatId
@@ -124,8 +124,8 @@ $(document).ready(function() {
         });
     });
     $nobot.click(function() {                                                  //go to welcome form
-        $bot.prop("disabled",true);
-        $nobot.prop("disabled",true);
+        $bot.prop("disabled", true);
+        $nobot.prop("disabled", true);
         var chat = {
             userLogin: storage.userLogin,
             chatId: storage.chatId
@@ -207,7 +207,7 @@ $(document).ready(function() {
         });
         var chosen = false;
         var stimulus;
-        for (var i = storage.messages.length - 1; i > 0; i--) {
+        for (var i = storage.messages.length - 1; i >= 0; i--) {
             if (!chosen && storage.messages[i].sender == "X") {
                 chosen = true;
                 stimulus = storage.messages[i].message;
@@ -269,8 +269,8 @@ $(document).ready(function() {
                             sender: "X",
                             message: msg
                         });
+                        scrollToBottom();
                     });
-                    scrollToBottom();
                 },
                 error: function() {
                     console.log("error receiving messages");

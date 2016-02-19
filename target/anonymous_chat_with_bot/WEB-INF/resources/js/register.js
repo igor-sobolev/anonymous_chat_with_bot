@@ -25,14 +25,14 @@ $(document).ready(function() {
                         $.ajax({                                                //check user for registration
                             url: "/users/register",
                             type: "POST",
-                            dataType: "text",
+                            dataType: "json",
                             data: data,
                             success: function(callback) {
                                 var html = "";
-                                if (callback == "Ok") {
+                                if (callback) {
                                     $("#register-dialog").dialog("close");
                                     registerSuccess();
-                                } else if (callback == "Error") {
+                                } else {
                                     html = errorMessage("Логин занят!");
                                     $("#message").html(html);
                                 }
