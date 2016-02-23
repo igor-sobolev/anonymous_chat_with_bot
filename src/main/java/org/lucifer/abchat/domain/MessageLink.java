@@ -4,9 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-/**
- * Created by PiCy on 2/15/2016.
- */
 @Entity
 @Table(name = "MESSAGE_LINK")
 public class MessageLink extends  Identificator {

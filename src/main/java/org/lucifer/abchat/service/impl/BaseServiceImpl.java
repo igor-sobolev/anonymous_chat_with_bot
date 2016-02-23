@@ -1,7 +1,8 @@
-package org.lucifer.abchat.service;
+package org.lucifer.abchat.service.impl;
 
 import org.lucifer.abchat.dao.BaseDao;
 import org.lucifer.abchat.domain.Identificator;
+import org.lucifer.abchat.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

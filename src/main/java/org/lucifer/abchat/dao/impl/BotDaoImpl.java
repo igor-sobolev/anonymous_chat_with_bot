@@ -1,5 +1,6 @@
-package org.lucifer.abchat.dao;
+package org.lucifer.abchat.dao.impl;
 
+import org.lucifer.abchat.dao.BotDao;
 import org.lucifer.abchat.domain.Bot;
 import org.springframework.stereotype.Component;
 

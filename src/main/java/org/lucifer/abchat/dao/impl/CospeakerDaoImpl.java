@@ -1,5 +1,6 @@
-package org.lucifer.abchat.dao;
+package org.lucifer.abchat.dao.impl;
 
+import org.lucifer.abchat.dao.CospeakerDao;
 import org.lucifer.abchat.domain.Cospeaker;
 import org.springframework.stereotype.Component;
 

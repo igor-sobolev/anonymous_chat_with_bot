@@ -1,15 +1,15 @@
-package org.lucifer.abchat.service;
+package org.lucifer.abchat.service.impl;
 
 
 import org.lucifer.abchat.dao.UserDao;
 import org.lucifer.abchat.domain.User;
 import org.lucifer.abchat.domain.UserAnswer;
 import org.lucifer.abchat.dto.UserDTO;
+import org.lucifer.abchat.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
 
 @Service
 @Transactional

@@ -1,8 +1,9 @@
-package org.lucifer.abchat.dao;
+package org.lucifer.abchat.dao.impl;
 
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.lucifer.abchat.dao.UserDao;
 import org.lucifer.abchat.domain.User;
 import org.springframework.stereotype.Component;
 

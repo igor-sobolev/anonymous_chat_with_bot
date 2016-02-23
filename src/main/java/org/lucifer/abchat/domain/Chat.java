@@ -6,10 +6,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
-/**
- * Created by PiCy on 2/8/2016.
- */
-
 @Entity
 @Table(name = "CHAT")
 public class Chat extends Identificator implements Serializable {

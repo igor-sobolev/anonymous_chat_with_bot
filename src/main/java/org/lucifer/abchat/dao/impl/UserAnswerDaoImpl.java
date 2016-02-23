@@ -1,5 +1,6 @@
-package org.lucifer.abchat.dao;
+package org.lucifer.abchat.dao.impl;
 
+import org.lucifer.abchat.dao.UserAnswerDao;
 import org.lucifer.abchat.domain.UserAnswer;
 import org.springframework.stereotype.Component;
 

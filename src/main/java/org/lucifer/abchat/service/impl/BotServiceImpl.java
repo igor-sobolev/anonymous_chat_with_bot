@@ -1,8 +1,10 @@
-package org.lucifer.abchat.service;
+package org.lucifer.abchat.service.impl;
 
 import org.lucifer.abchat.dao.MessageLinkDao;
 import org.lucifer.abchat.domain.*;
 import org.lucifer.abchat.dto.MessageDTO;
+import org.lucifer.abchat.service.BotService;
+import org.lucifer.abchat.service.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,13 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by PiCy on 2/16/2016.
- */
 @Service
 @Transactional
 public class BotServiceImpl extends BaseServiceImpl<Bot> implements BotService {
-    public static final String OOPS = "Oops";
+    public static final String STD_MESSAGE = "Oops";
     private static final double FIFTEEN_PERCENT = 0.15;
     private static final double FIFTY_PERCENT = 0.5;
 
@@ -41,7 +40,7 @@ public class BotServiceImpl extends BaseServiceImpl<Bot> implements BotService {
         Message m = new Message(chat, null, source, target);
 
         if (messageLinkDao.count() == 0) {
-            m.setMessage(OOPS);
+            m.setMessage(STD_MESSAGE);
         } else {
             String message = findClosest(msg);
             m.setMessage(message);

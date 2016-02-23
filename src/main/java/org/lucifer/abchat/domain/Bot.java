@@ -4,17 +4,18 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
-
-/**
- * Created by PiCy on 2/8/2016.
- */
+import java.util.Set;
 
 @Entity
 @Table(name = "BOT")
+@SuppressWarnings("JpaAttributeTypeInspection")
 public class Bot extends Identificator implements Serializable {
     @JsonIgnore
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "bot", cascade = CascadeType.ALL)
     private Cospeaker cospeaker;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "bot")
+    private Set<SemanticNetwork> networks;
 
     public  Bot() {
 
@@ -28,5 +29,11 @@ public class Bot extends Identificator implements Serializable {
         this.cospeaker = cospeaker;
     }
 
+    public Set<SemanticNetwork> getNetworks() {
+        return networks;
+    }
 
+    public void setNetworks(Set<SemanticNetwork> networks) {
+        this.networks = networks;
+    }
 }

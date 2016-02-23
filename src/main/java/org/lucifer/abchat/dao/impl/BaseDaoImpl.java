@@ -1,8 +1,9 @@
-package org.lucifer.abchat.dao;
+package org.lucifer.abchat.dao.impl;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.lucifer.abchat.dao.BaseDao;
 import org.lucifer.abchat.domain.Identificator;
 import org.springframework.beans.factory.annotation.Autowired;
 

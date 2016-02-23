@@ -1,14 +1,15 @@
-package org.lucifer.abchat.dao;
+package org.lucifer.abchat.dao.impl;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.lucifer.abchat.dao.ChatDao;
 import org.lucifer.abchat.domain.Chat;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-public class ChatDaoImpl extends BaseDaoImpl<Chat> implements ChatDao{
+public class ChatDaoImpl extends BaseDaoImpl<Chat> implements ChatDao {
     public List<Long> freeRooms() {
         Session session = getSession();
         /*
