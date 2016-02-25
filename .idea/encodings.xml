@@ -41,10 +41,11 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/ChatDTO.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/MessageDTO.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/UserDTO.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/GrammaticalBase.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphInfo.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphUtils.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphologySingleton.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/semantic/GrammaticalBase.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/semantic/Semantic.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BotService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/ChatService.java" charset="UTF-16" />
