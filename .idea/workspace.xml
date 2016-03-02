@@ -2,12 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba58b553-9f79-4713-9c72-bcf3d1244f69" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\target\anonymous_chat_with_bot\WEB-INF\classes\org\lucifer\abchat\morphology\semantic\GrammaticalBase.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/AdminController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MessageLinkService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin_login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/BaseService.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/BaseService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/BaseService.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/BaseService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/BaseServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/BaseServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/BaseServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/BaseServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/BotServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/BotServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/BotServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/BotServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/morphology/MorphologySingleton.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/morphology/MorphologySingleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/morphology/MorphologySingleton.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/morphology/MorphologySingleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/morphology/semantic/Semantic.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/morphology/semantic/Semantic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphologySingleton.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphologySingleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/domain/User.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/domain/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/domain/User.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/domain/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/controller/UserController.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/dao/impl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/dao/impl/UserDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/dao/impl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/dao/impl/UserDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/UserService.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="anonymous_chat_with_bot.iws" />
@@ -44,93 +82,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SemanticNetworkServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SemanticNetworkServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5752688">
+            <state vertical-scroll-proportion="0.0">
               <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
-              <folding>
-                <element signature="e#12165#12166#0" expanded="true" />
-                <element signature="e#12224#12225#0" expanded="true" />
-                <element signature="e#13343#13344#0" expanded="true" />
-                <element signature="e#13405#13406#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MorphologySingleton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphologySingleton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Semantic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/semantic/Semantic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SemanticNetwork.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/SemanticNetwork.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#541#542#0" expanded="false" />
-                <element signature="e#571#572#0" expanded="false" />
-                <element signature="e#614#615#0" expanded="false" />
-                <element signature="e#642#643#0" expanded="false" />
-                <element signature="e#695#696#0" expanded="false" />
-                <element signature="e#729#730#0" expanded="false" />
-                <element signature="e#756#757#0" expanded="false" />
-                <element signature="e#782#783#0" expanded="false" />
-                <element signature="e#817#818#0" expanded="false" />
-                <element signature="e#847#848#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SemanticNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/SemanticNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/ChatController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#832#833#0" expanded="false" />
-                <element signature="e#877#878#0" expanded="false" />
-                <element signature="e#1031#1032#0" expanded="false" />
-                <element signature="e#1088#1089#0" expanded="false" />
-                <element signature="e#1222#1223#0" expanded="false" />
-                <element signature="e#1262#1263#0" expanded="false" />
-                <element signature="e#1575#1576#0" expanded="false" />
-                <element signature="e#1617#1618#0" expanded="false" />
-                <element signature="e#1746#1747#0" expanded="false" />
-                <element signature="e#1790#1791#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,16 +102,118 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#1041#1042#0" expanded="true" />
+                <element signature="e#1092#1093#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+                <element signature="e#1319#1320#0" expanded="true" />
+                <element signature="e#1714#1715#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.39534885">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.076923">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ml.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ml.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+              <folding>
+                <marker date="1456930313650" expanded="true" signature="215:249" placeholder="..." />
+                <marker date="1456930313650" expanded="true" signature="699:728" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/chat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1455887524826" expanded="true" signature="1122:1140" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageLinkServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+              <folding>
+                <element signature="e#909#910#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Jsp File" />
         <option value="Html5" />
-        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -169,26 +228,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/ChatDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/MessageDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Identificator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Chat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/CospeakerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Cospeaker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/SemanticNetwork.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticNodeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BotDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/GrammaticalBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/SemanticLink.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticLinkDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/UserAnswer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserAnswerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/CospeakerDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Bot.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/ChatDTO.java" />
@@ -196,10 +238,8 @@
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticNetworkDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticLinkDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticNodeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/SemanticNetworkService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/ChatService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/MessageDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticNetworkDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/ChatDao.java" />
@@ -214,12 +254,31 @@
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/MessageLinkDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BaseDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/SemanticNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/semantic/Semantic.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphologySingleton.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/login.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin_login.js" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MessageLinkService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_page.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ml.js" />
       </list>
     </option>
   </component>
@@ -253,7 +312,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="740" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -758,9 +817,11 @@
     <property name="dynamic.classpath" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="JavaScriptLanguageLevel" value="JSX" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.lucifer.abchat.service.impl" />
       <recent name="org.lucifer.abchat.dao.impl" />
       <recent name="org.lucifer.abchat.dao" />
       <recent name="org.lucifer.abchat.service" />
@@ -773,7 +834,7 @@
       <recent name="D:\workSpace\anonymous_chat_with_bot\src\main\webapp\WEB-INF\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MorphologySingleton">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
     <configuration default="false" name="BotServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1193,7 +1254,8 @@
       <workItem from="1456478294801" duration="12604000" />
       <workItem from="1456492237773" duration="2043000" />
       <workItem from="1456737572652" duration="19737000" />
-      <workItem from="1456823873070" duration="12981000" />
+      <workItem from="1456823873070" duration="13086000" />
+      <workItem from="1456911178562" duration="19142000" />
     </task>
     <task id="LOCAL-00001" summary="Bad dialogs">
       <created>1454670657277</created>
@@ -1297,11 +1359,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456836585261</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="SN saves not bad.">
+      <created>1456837483339</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1456837483339</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272770000" />
+    <option name="totallyTimeSpent" value="292017000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1313,32 +1381,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="740" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31647635" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31527093" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32019705" sideWeight="0.51059" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34747145" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3464696" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24810892" sideWeight="0.48101267" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24810892" sideWeight="0.4723618" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24810892" sideWeight="0.51898736" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24810892" sideWeight="0.5276382" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24659607" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31973898" sideWeight="0.48940998" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.318555" sideWeight="0.48940998" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1406,7 +1474,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotServiceImpl.java</url>
-          <line>97</line>
+          <line>98</line>
           <properties />
           <option name="timeStamp" value="71" />
         </line-breakpoint>
@@ -1429,7 +1497,7 @@
           <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="81" />
+      <option name="time" value="82" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1438,154 +1506,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BotDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticLinkDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticNetworkDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticNodeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BotDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/CospeakerDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/ChatDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/MessageDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticLinkDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticNetworkDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticNodeDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserAnswerDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Bot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Chat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Cospeaker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Identificator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/MessageLink.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1593,39 +1513,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/UserAnswer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BotService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18428184">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/ChatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1685,19 +1576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7457044">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1715,7 +1597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34688348">
           <caret line="316" column="0" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1723,19 +1604,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#541#542#0" expanded="false" />
-            <element signature="e#571#572#0" expanded="false" />
-            <element signature="e#614#615#0" expanded="false" />
-            <element signature="e#642#643#0" expanded="false" />
-            <element signature="e#695#696#0" expanded="false" />
-            <element signature="e#729#730#0" expanded="false" />
-            <element signature="e#756#757#0" expanded="false" />
-            <element signature="e#782#783#0" expanded="false" />
-            <element signature="e#817#818#0" expanded="false" />
-            <element signature="e#847#848#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1751,7 +1620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32185885">
           <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1804,6 +1672,211 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphologySingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
+          <folding>
+            <element signature="e#1992#1993#0" expanded="true" />
+            <element signature="e#2032#2033#0" expanded="true" />
+            <element signature="e#2064#2065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38037866">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+          <folding>
+            <element signature="e#1201#1202#0" expanded="false" />
+            <element signature="e#1247#1248#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/login_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="14" column="11" selection-start-line="9" selection-start-column="8" selection-end-line="14" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/chat_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4331396">
+          <caret line="32" column="10" selection-start-line="8" selection-start-column="4" selection-end-line="32" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/ChatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63243246">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.655527">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MessageLinkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2622108">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="13" selection-start-line="5" selection-start-column="12" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455887524826" expanded="true" signature="1122:1140" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/ChatServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1812,26 +1885,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphologySingleton.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5752688">
-          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+        <state vertical-scroll-proportion="-4.076923">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ml.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
           <folding>
-            <element signature="e#12165#12166#0" expanded="true" />
-            <element signature="e#12224#12225#0" expanded="true" />
-            <element signature="e#13343#13344#0" expanded="true" />
-            <element signature="e#13405#13406#0" expanded="true" />
+            <marker date="1456930313650" expanded="true" signature="215:249" placeholder="..." />
+            <marker date="1456930313650" expanded="true" signature="699:728" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39534885">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
