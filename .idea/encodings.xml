@@ -3,8 +3,10 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/AdminController.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/BotStrategyController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/ChatController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/MainController.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/MessageLinkController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/UserController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BaseDao.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BotDao.java" charset="UTF-16" />
@@ -60,6 +62,17 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap-theme.css" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap-theme.css.map" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap-theme.min.css" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap-theme.min.css.map" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap.css" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap.css.map" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap.min.css" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap.min.css.map" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/js/bootstrap.js" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/js/bootstrap.min.js" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/js/npm.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/bootstrap.css" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_page.html" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/login_form.html" charset="UTF-16" />
