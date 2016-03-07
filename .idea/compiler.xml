@@ -26,7 +26,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="anonymous_chat_with_bot" target="1.5" />
+      <module name="anonymous_chat_with_bot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
