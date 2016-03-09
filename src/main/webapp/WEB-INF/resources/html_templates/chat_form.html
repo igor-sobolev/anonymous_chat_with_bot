@@ -1,10 +1,11 @@
 <div class="panel-body center-block" style="width: 70%; height: 50%;">
-    <div>
-        <div id="user-login">
+    <div class="row">
+        <div class="col-md-5" id="user-login" style="width: 80%">
 
         </div>
-
-        <button id="logoff" style="width: 100%;">Выйти</button>
+        <div class="col-md-2" style="text-align: right; width: 20%">
+            <button id="logoff" style="width: 100%;">Выйти</button>
+        </div>
     </div>
     <div id="tabs">
         <ul>
@@ -12,21 +13,35 @@
             <li id="top-score"><a href="#tab-2">Таблица лидеров</a></li>
         </ul>
         <div id="tab-1">
-            <div id="chat">
-            <textarea readonly id="chat-window"
-                      style="overflow:auto; width: 100%; height: 100%; resize: none"></textarea>
-                <label for="msg-text">Сообщение:</label>
-                <input id="msg-text" type="text" style="width: 100%;">
-                <button id="send-message" style="width: 100%;">Отправить</button>
-            </div>
-            <div id="buttons">
-                <button id="bot" style="width: 100%;">Бот</button>
-                <button id="nobot" style="width: 100%;">Не бот</button>
-                <button id="new-chat" style="width: 100%;">Новый чат</button>
+            <div class="panel-body" id="chat">
+                <div class="row">
+                    <div class="col-lg-1" style="width: 70%">
+                        <textarea class="form-control" readonly id="chat-window"
+                                  style="overflow:auto; width: 100%; height: 100%; resize: none; background: white"></textarea>
+                    </div>
+                    <div class="col-lg-1" id="buttons" style="width: 30%">
+                        <button id="bot" style="width: 100%; margin-bottom: 1%">Бот</button>
+                        <button id="nobot" style="width: 100%; margin-bottom: 1%">Не бот</button>
+                        <button id="new-chat" style="width: 100%; margin-bottom: 1%">Новый чат</button>
+                    </div>
+                </div>
+                <div class="row" style="margin: 5px 0 0 0">
+                    <div style="width: 70%;">
+                        <div>
+                            <label class="hidden" for="msg-text">Сообщение:</label>
+                        </div>
+                        <div style="width: 75%; float: left; margin-right: 1%">
+                            <input class="form-control" id="msg-text" type="text">
+                        </div>
+                        <div style="width: 23%; float: right; margin-right: 1%">
+                            <button id="send-message" style="width: 100%; float: right">Отправить</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="tab-2">
-            <div id="top">
+            <div class="panel-body" id="top">
 
             </div>
         </div>
