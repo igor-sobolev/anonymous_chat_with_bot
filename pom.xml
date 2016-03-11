@@ -81,6 +81,13 @@
             <version>${springframework.version}</version>
         </dependency>
 
+        <!--for mailing-->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
 
         <!-- Servlet .............................................................................................. -->
         <dependency>
@@ -148,6 +155,12 @@
             <version>1.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>
@@ -155,6 +168,10 @@
             <id>russian-morphology.lucene.apache.org</id>
             <name>Lucene Russian Morphology Repository for Maven</name>
             <url>http://russianmorphology.googlecode.com/svn/repo/releases/</url>
+        </repository>
+        <repository>
+            <id>JBoss repository</id>
+            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
         </repository>
     </repositories>
 

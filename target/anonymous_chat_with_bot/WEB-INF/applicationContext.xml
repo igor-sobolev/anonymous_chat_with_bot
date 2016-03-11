@@ -14,6 +14,22 @@
 
 	<context:component-scan base-package="org.lucifer.abchat" />
 
+	<!-- SET default mail properties -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com"/>
+		<property name="port" value="25"/>
+		<property name="username" value="abchat2016@gmail.com"/>
+		<property name="password" value="Igor436352"/>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
+
 	<mvc:annotation-driven />
 	<mvc:resources mapping="/resources/**" location="WEB-INF/resources/"/>
 
