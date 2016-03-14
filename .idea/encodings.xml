@@ -53,10 +53,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/MailDTO.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/MessageDTO.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/UserDTO.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphInfo.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphUtils.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/morphology/MorphologySingleton.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/semantic/Semantic.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/AdminService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BotService.java" charset="UTF-16" />
@@ -77,6 +73,11 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/StdMessageServiceImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/morphology/MorphInfo.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/morphology/MorphUtils.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/morphology/MorphologySingleton.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/preprocessor/StringPreProcessor.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/semantic/Semantic.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/css/bootstrap-theme.css" charset="UTF-16" />

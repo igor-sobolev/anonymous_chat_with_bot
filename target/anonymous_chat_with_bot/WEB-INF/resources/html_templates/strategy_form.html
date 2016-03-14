@@ -1,0 +1,83 @@
+<form id="strategy-form" class="form-horizontal text-center">
+    <input type="hidden" id="strategy-id" name="id" value="">
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="silence-prob">Имя</label>
+        <div class="col-sm-10">
+            <input type="text" name="name" id="strategy-name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="silence-prob">Вероятность молчания (%)</label>
+        <div class="col-sm-10">
+            <input type="number" name="silenceProb" id="silence-prob" max="100" min="0" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="msg-limit">Ограничение на количество сообщений</label>
+        <div class="col-sm-10">
+            <input type="number" name="msgLimit" id="msg-limit" min="0" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="error-prob">Вероятность описки (%)</label>
+        <div class="col-sm-10">
+            <input type="number" name="errorProb" id="error-prob"  max="100" min="0" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="tanimoto-threshold">Порог для коэффициента Танимото (%)</label>
+        <div class="col-sm-10">
+            <input type="number" name="tanimotoThreshold" id="tanimoto-threshold"  max="100" min="0" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="crowd-rand">Вероятность случайного выбора в краудсорсе (%)</label>
+        <div class="col-sm-10">
+            <input type="number" name="crowdRand" id="crowd-rand" max="100" min="0" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="semantic">Семантические сети</label>
+        <div class="col-sm-10">
+            <input type="checkbox" name="semantic" id="semantic">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="crowd-source">CrowdSource</label>
+        <div class="col-sm-10">
+            <input type="checkbox" name="crowdSource" id="crowd-source">
+        </div>
+    </div>
+    <div class="form-group center-block">
+        <button id="strategy-save" class="btn btn-default">Сохранить</button>
+        <button id="strategy-cancel" class="btn btn-default">Отмена</button>
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var $cr = $("#crowd-rand");
+        var $sp = $("#silence-prob");
+        var $msgl = $("#msg-limit");
+        var $ep = $("#error-prob");
+        var $tt = $("#tanimoto-threshold");
+        var checkProb = function(selector) {
+            selector.change(function() {
+                if (selector.val() > 100) {
+                    selector.val(100);
+                }
+                if (selector.val() < 0) {
+                    selector.val(0);
+                }
+            });
+        }
+        checkProb($cr);
+        checkProb($sp);
+        checkProb($ep);
+        checkProb($tt);
+        $msgl.change(function() {
+            if ($msgl.val() < 0) {
+                $msgl.val(0);
+            }
+        });
+    });
+</script>
