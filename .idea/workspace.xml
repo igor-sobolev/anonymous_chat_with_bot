@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba58b553-9f79-4713-9c72-bcf3d1244f69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/img/logo1.png" />
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\webapp\WEB-INF\resources\img\logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\target\anonymous_chat_with_bot\WEB-INF\classes\org\lucifer\abchat\morphology\MorphInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\target\anonymous_chat_with_bot\WEB-INF\classes\org\lucifer\abchat\morphology\MorphUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\target\anonymous_chat_with_bot\WEB-INF\classes\org\lucifer\abchat\morphology\MorphologySingleton.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\target\anonymous_chat_with_bot\WEB-INF\resources\img\logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\target\classes\org\lucifer\abchat\morphology\MorphInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\target\classes\org\lucifer\abchat\morphology\MorphUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workSpace\anonymous_chat_with_bot\target\classes\org\lucifer\abchat\morphology\MorphologySingleton.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/preprocessor/StringPreProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/preprocessor/StringPreProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/login_form.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/login_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/register.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/register_form.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/register_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/welcome_form.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/welcome_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/resources/html_templates/welcome_form.html" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/resources/html_templates/welcome_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -99,8 +84,8 @@
       <file leaf-file-name="StringPreProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/preprocessor/StringPreProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7120419">
-              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.8900524">
+              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -1330,7 +1315,7 @@
       <workItem from="1457623927131" duration="3661000" />
       <workItem from="1457687544111" duration="21437000" />
       <workItem from="1457945506951" duration="14551000" />
-      <workItem from="1457970188320" duration="4668000" />
+      <workItem from="1457970188320" duration="4823000" />
     </task>
     <task id="LOCAL-00001" summary="Bad dialogs">
       <created>1454670657277</created>
@@ -1476,11 +1461,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457709186011</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Little changes in pre-processor. Added logo and diving in welcom page, login and register.">
+      <created>1457979006986</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1457979006986</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="408300000" />
+    <option name="totallyTimeSpent" value="408455000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1560,7 +1551,8 @@
     <MESSAGE value="Strategies complete CRUD. Settings complete. Strategies and settings not totally used!" />
     <MESSAGE value="Admin page 90% (most of settings works). Changed appearance of chat page." />
     <MESSAGE value="Reading from SN. Not so bad." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reading from SN. Not so bad." />
+    <MESSAGE value="Little changes in pre-processor. Added logo and diving in welcom page, login and register." />
+    <option name="LAST_COMMIT_MESSAGE" value="Little changes in pre-processor. Added logo and diving in welcom page, login and register." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1970,8 +1962,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/utils/preprocessor/StringPreProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7120419">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.8900524">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
           <folding />
         </state>
       </provider>
