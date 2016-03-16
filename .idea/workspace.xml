@@ -2,52 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba58b553-9f79-4713-9c72-bcf3d1244f69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/BaseServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/BaseServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/BotStrategyServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/BotStrategyServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/ChatServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/ChatServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/lucifer/abchat/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotStrategyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotStrategyServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/ChatServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/ChatServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/lucifer/abchat/config/InfrastructureContextConfiguration.java" afterPath="$PROJECT_DIR$/src/test/java/org/lucifer/abchat/config/InfrastructureContextConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/lucifer/abchat/dao/UserDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/lucifer/abchat/dao/UserDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/BaseServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/BaseServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/BotStrategyServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/BotStrategyServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/ChatServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/ChatServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/SemanticNetworkServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/classes/org/lucifer/abchat/service/impl/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/chat.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/chat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/resources/js/chat.js" afterPath="$PROJECT_DIR$/target/anonymous_chat_with_bot/WEB-INF/resources/js/chat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\BaseDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BaseDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\BotDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BotDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\BotStrategyDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BotStrategyDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\BugTrackDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BugTrackDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\ChatDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/ChatDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\CospeakerDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/CospeakerDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\MessageDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/MessageDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\MessageLinkDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/MessageLinkDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\SemanticLinkDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticLinkDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\SemanticNetworkDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticNetworkDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\SemanticNodeDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticNodeDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\StdMessageDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/StdMessageDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\UserAnswerDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserAnswerDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserDao.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\BaseDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BaseDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\BotDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BotDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\BotStrategyDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BotStrategyDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\BugTrackDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BugTrackDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\ChatDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/ChatDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\CospeakerDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/CospeakerDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\MessageDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/MessageDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\MessageLinkDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/MessageLinkDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\SemanticLinkDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticLinkDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\SemanticNetworkDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticNetworkDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\SemanticNodeDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticNodeDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\StdMessageDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/StdMessageDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\UserAnswerDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserAnswerDaoImpl.java" />
-      <change type="MOVED" beforePath="D:\workSpace\anonymous_chat_with_bot\src\main\java\org\lucifer\abchat\impl\UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserDaoImpl.java" />
     </list>
     <ignored path="anonymous_chat_with_bot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,10 +123,10 @@
       <file leaf-file-name="chat.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.858885">
-              <caret line="275" column="29" selection-start-line="275" selection-start-column="29" selection-end-line="275" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.44425088">
+              <caret line="267" column="40" selection-start-line="267" selection-start-column="40" selection-end-line="267" selection-end-column="40" />
               <folding>
-                <marker date="1458147400801" expanded="true" signature="1122:1140" placeholder="..." />
+                <marker date="1458148300990" expanded="true" signature="1122:1140" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1133,7 +1096,7 @@
       <workItem from="1458036940877" duration="9390000" />
       <workItem from="1458051960021" duration="12134000" />
       <workItem from="1458119621123" duration="14631000" />
-      <workItem from="1458140286119" duration="5871000" />
+      <workItem from="1458140286119" duration="6785000" />
     </task>
     <task id="LOCAL-00001" summary="Bad dialogs">
       <created>1454670657277</created>
@@ -1303,11 +1266,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458134969819</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fixed some fast-sending messages by bot.">
+      <created>1458147553781</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1458147553783</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450717000" />
+    <option name="totallyTimeSpent" value="451631000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1365,7 +1334,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bad dialogs" />
     <MESSAGE value="Complete registration." />
     <MESSAGE value="DataBase start." />
     <MESSAGE value="Chat loading started." />
@@ -1390,7 +1358,8 @@
     <MESSAGE value="Little changes in pre-processor. Added logo and diving in welcom page, login and register." />
     <MESSAGE value="Statistics page started to do." />
     <MESSAGE value="Statistics done. Bug tracker done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Statistics done. Bug tracker done." />
+    <MESSAGE value="Fixed some fast-sending messages by bot." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some fast-sending messages by bot." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1414,7 +1383,7 @@
           <option name="timeStamp" value="131" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="132" />
+      <option name="time" value="133" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1805,10 +1774,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.858885">
-          <caret line="275" column="29" selection-start-line="275" selection-start-column="29" selection-end-line="275" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.44425088">
+          <caret line="267" column="40" selection-start-line="267" selection-start-column="40" selection-end-line="267" selection-end-column="40" />
           <folding>
-            <marker date="1458147400801" expanded="true" signature="1122:1140" placeholder="..." />
+            <marker date="1458148300990" expanded="true" signature="1122:1140" placeholder="..." />
           </folding>
         </state>
       </provider>
