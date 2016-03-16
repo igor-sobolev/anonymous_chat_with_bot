@@ -2,41 +2,31 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/BaseDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/BotDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/BotStrategyDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/BugTrackDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/ChatDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/CospeakerDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/MessageDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/MessageLinkDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/SemanticLinkDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/SemanticNetworkDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/SemanticNodeDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/StdMessageDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/UserAnswerDao.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/UserDao.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/config/AppGlobal.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/AdminController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/BotStrategyController.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/BugTrackController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/ChatController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/MainController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/MessageLinkController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/controller/UserController.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BaseDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BotDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/BotStrategyDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/ChatDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/CospeakerDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/MessageDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/MessageLinkDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticLinkDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticNetworkDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/SemanticNodeDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/StdMessageDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserAnswerDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/UserDao.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BaseDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BotDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/BotStrategyDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/ChatDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/CospeakerDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/MessageDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/MessageLinkDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticLinkDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticNetworkDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/SemanticNodeDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/StdMessageDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserAnswerDaoImpl.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dao/impl/UserDaoImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Bot.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/BotStrategy.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/BugTrack.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Chat.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Cospeaker.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/domain/Identificator.java" charset="UTF-16" />
@@ -54,10 +44,25 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/MessageDTO.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/StatisticsDTO.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/dto/UserDTO.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/BaseDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/BotDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/BotStrategyDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/BugTrackDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/ChatDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/CospeakerDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/MessageDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/MessageLinkDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/SemanticLinkDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/SemanticNetworkDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/SemanticNodeDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/StdMessageDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/UserAnswerDaoImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/impl/UserDaoImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/AdminService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BaseService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BotService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BotStrategyService.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BugTrackService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/ChatService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MailService.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MessageLinkService.java" charset="UTF-16" />
@@ -68,6 +73,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotServiceImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BotStrategyServiceImpl.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BugTrackServiceImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/ChatServiceImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/MailServiceImpl.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/MessageLinkServiceImpl.java" charset="UTF-16" />
@@ -94,6 +100,7 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/bootstrap/js/npm.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/admin_page.html" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/au_std_message.html" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/bug_track_form.html" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/login_form.html" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/ml_add_update.html" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/html_templates/register_form.html" charset="UTF-16" />
@@ -106,6 +113,8 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/admin_login.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app_settings.js" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/bt.js" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/bugtrack.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/chat.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/jquery-2.1.4.min.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/jquery.spin.js" charset="UTF-16" />
@@ -119,5 +128,7 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/strategy.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/utils.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/welcome.js" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/test/java/org/lucifer/abchat/config/InfrastructureContextConfiguration.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/test/java/org/lucifer/abchat/dao/UserDaoTest.java" charset="UTF-16" />
   </component>
 </project>
