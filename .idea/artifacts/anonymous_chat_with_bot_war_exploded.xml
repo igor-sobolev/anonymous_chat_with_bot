@@ -45,6 +45,7 @@
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:3.0.0" />
           <element id="library" level="project" name="Maven: javax.mail:mail:1.4.7" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: org.mockito:mockito-all:1.9.5" />
         </element>
       </element>
       <element id="directory" name="META-INF">
