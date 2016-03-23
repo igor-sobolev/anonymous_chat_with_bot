@@ -16,5 +16,14 @@
     <mapping class="org.lucifer.abchat.domain.Cospeaker" />
     <mapping class="org.lucifer.abchat.domain.Message" />
     <mapping class="org.lucifer.abchat.domain.UserAnswer" />
+	
+	<mapping class="org.lucifer.abchat.domain.BotStrategy" />
+	<mapping class="org.lucifer.abchat.domain.BugTrack" />
+	<mapping class="org.lucifer.abchat.domain.Identificator" />
+	<mapping class="org.lucifer.abchat.domain.MessageLink" />
+	<mapping class="org.lucifer.abchat.domain.SemanticLink" />
+	<mapping class="org.lucifer.abchat.domain.SemanticNetwork" />
+	<mapping class="org.lucifer.abchat.domain.SemanticNode" />
+	<mapping class="org.lucifer.abchat.domain.StdMessage" />
   </session-factory>
 </hibernate-configuration>

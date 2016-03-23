@@ -46,6 +46,7 @@
           <element id="library" level="project" name="Maven: javax.mail:mail:1.4.7" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
           <element id="library" level="project" name="Maven: org.mockito:mockito-all:1.9.5" />
+          <element id="library" level="project" name="Maven: com.h2database:h2:1.4.191" />
         </element>
       </element>
       <element id="directory" name="META-INF">
