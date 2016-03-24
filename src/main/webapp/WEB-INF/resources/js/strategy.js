@@ -31,6 +31,7 @@ var saveStrategy = function() {
     var data = getJSON($("#strategy-form"));
     data.semantic = $("#semantic").prop("checked");
     data.crowdSource = $("#crowd-source").prop("checked");
+    data.repeat = $("#repeat").prop("checked");
     if (!data.name) {
         $("#for-strategy-message").html(warningMessage("Задайте имя стратегии!"));
         clearMsg();
@@ -69,11 +70,16 @@ var updateStrategy = function() {
             $("#strategy-name").val(callback.name);
             $("#silence-prob").val(callback.silenceProb * 100);
             $("#msg-limit").val(callback.msgLimit);
+            $("#unique").val(callback.unique);
             $("#error-prob").val(callback.errorProb * 100);
             $("#tanimoto-threshold").val(callback.tanimotoThreshold * 100);
             $("#crowd-rand").val(callback.crowdRand * 100);
             $("#initiative").val(callback.initiative * 100);
             if (callback.semantic) $("#semantic").prop("checked", true);
+            if (callback.repeat) {
+                $("#repeat").prop("checked", true);
+                $("#unique").prop("disabled", false);
+            }
             if (callback.crowdSource) $("#crowd-source").prop("checked", true);
         },
         error: function() {

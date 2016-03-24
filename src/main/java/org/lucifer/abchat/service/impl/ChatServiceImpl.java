@@ -98,9 +98,8 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
     public List<MessageDTO> receive(ChatDTO ch) {                               //return list of message for user
         Chat chat = findById(ch.getChatId());
         Bot b = findBotInChat(ch.getChatId());
-        int botLastMsgCount = countLastBotMessages(chat);
-        double probForMsg = b.getStrategy().getInitiative() / (botLastMsgCount * 100);
-        double silent = b.getStrategy().getSilenceProb();
+        long botLastMsgCount = countLastBotMessages(chat);
+        double probForMsg = b.getStrategy().getInitiative() / Math.pow(botLastMsgCount, 4);
 
         Set<Message> messages = null;
         for (Cospeaker csp : chat.getCospeakers()) {
@@ -112,7 +111,7 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
         }
         if (Math.random() < probForMsg) {
             Message botMessage = botService.initiativeMessage(ch.getChatId());
-            if (botMessage != null) messageDao.save(botMessage);
+            if (botMessage != null && !repeats(botMessage)) messageDao.save(botMessage);
         }
         return messagesToDTO(messages, ch.getMaxMessageId());
     }
@@ -194,10 +193,10 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
         return both;
     }
 
-    protected Integer countLastBotMessages(Chat chat) {
+    protected long countLastBotMessages(Chat chat) {
         Bot bot = findBotInChat(chat.getId());
-        int maxIdSended = maxMsgId(bot.getCospeaker().getSended());
-        int maxIdReceived = maxMsgId(bot.getCospeaker().getReceived());
+        long maxIdSended = maxMsgId(bot.getCospeaker().getSended());
+        long maxIdReceived = maxMsgId(bot.getCospeaker().getReceived());
         if (maxIdSended == -1) return 0;
         if (maxIdSended < maxIdReceived) return 0;
         if (maxIdReceived != -1) return countAfter(maxIdReceived,
@@ -205,8 +204,35 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
         else return bot.getCospeaker().getSended().size();
     }
 
-    private Integer countAfter(int maxIdReceived, Set<Message> sended) {
-        int result = 0;
+    private boolean repeats(Message botMessage) {
+        Cospeaker botCSP = botMessage.getSource();
+        Bot bot = botCSP.getBot();
+        long unique = bot.getStrategy().getUnique();
+        boolean repeat = bot.getStrategy().getRepeat();
+        if (repeat) {
+            long counted = countMessagesAfter(botMessage);
+            if (counted != -1) {
+                return unique > counted;
+            }
+        }
+        return false;
+    }
+
+    private long countMessagesAfter(Message botMessage) {
+        Cospeaker botCSP = botMessage.getSource();
+        Long equalId = -1L;
+        for (Message m : botCSP.getSended()) {
+            if (m.getMessage().equals(botMessage.getMessage())
+                    && m.getId() > equalId) {
+                equalId = m.getId();
+            }
+        }
+        if (equalId == -1L) return -1L;
+        return countAfter(equalId, botCSP.getSended());
+    }
+
+    private long countAfter(long maxIdReceived, Set<Message> sended) {
+        long result = 0;
         for (Message m : sended) {
             if (m.getId() > maxIdReceived) result++;
         }

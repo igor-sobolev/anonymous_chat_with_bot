@@ -1,7 +1,7 @@
 <form id="strategy-form" class="form-horizontal text-center">
     <input type="hidden" id="strategy-id" name="id" value="">
     <div class="form-group">
-        <label class="col-sm-2 control-label" for="silence-prob">Имя</label>
+        <label class="col-sm-2 control-label" for="strategy-name">Имя</label>
         <div class="col-sm-10">
             <input type="text" name="name" id="strategy-name">
         </div>
@@ -43,6 +43,18 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="col-sm-2 control-label" for="repeat">Не повторяться</label>
+        <div class="col-sm-10">
+            <input type="checkbox" name="repeat" id="repeat">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="unique">Количество "уникальных" сообщений</label>
+        <div class="col-sm-10">
+            <input type="number" name="unique" id="unique" min="0" value="0" disabled>
+        </div>
+    </div>
+    <div class="form-group">
         <label class="col-sm-2 control-label" for="semantic">Семантические сети</label>
         <div class="col-sm-10">
             <input type="checkbox" name="semantic" id="semantic">
@@ -64,6 +76,8 @@
         var $cr = $("#crowd-rand");
         var $sp = $("#silence-prob");
         var $msgl = $("#msg-limit");
+        var $unique = $("#unique");
+        var $repeat = $("#repeat");
         var $ep = $("#error-prob");
         var $in = $("#initiative");
         var $tt = $("#tanimoto-threshold");
@@ -76,12 +90,24 @@
                     selector.val(0);
                 }
             });
-        }
+        };
         checkProb($cr);
         checkProb($in);
         checkProb($sp);
         checkProb($ep);
         checkProb($tt);
+        $unique.change(function() {
+            if ($msgl.val() < 0) {
+                $msgl.val(0);
+            }
+        });
+        $repeat.change(function() {
+            if ($repeat.prop("checked")) {
+                $unique.prop("disabled", false);
+            } else {
+                $unique.prop("disabled", true);
+            }
+        });
         $msgl.change(function() {
             if ($msgl.val() < 0) {
                 $msgl.val(0);

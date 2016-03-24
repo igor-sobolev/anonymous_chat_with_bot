@@ -21,31 +21,53 @@ public class BotStrategy extends Identificator implements Serializable {
     private Set<Bot> bots;
 
     @Column(name = "SILENCE_PROB")
-    Double silenceProb;
+    private Double silenceProb;
 
     @Column(name = "MSG_LIMIT")
-    Long msgLimit;
+    private Long msgLimit;
 
     @Column(name = "ERROR_PROB")
-    Double errorProb;
+    private Double errorProb;
 
     @Column(name = "TANIMOTO_THRESHOLD")
-    Double tanimotoThreshold;
+    private Double tanimotoThreshold;
 
     @Column(name = "CROWD_RAND")
-    Double crowdRand;
+    private Double crowdRand;
 
     @Column(name = "INITIATIVE")
-    Double initiative;
+    private Double initiative;
+
+    @Column(name = "REPEAT_W")
+    private Boolean repeat;
+
+    @Column(name = "UNIQUE_W")
+    private Long unique;
 
     @Column(name = "SEMANTIC")
-    Boolean semantic;
+    private Boolean semantic;
 
     @Column(name = "CROWD_SOURCE")
-    Boolean crowdSource;
+    private Boolean crowdSource;
 
     public BotStrategy() {
 
+    }
+
+    public Boolean getRepeat() {
+        return repeat;
+    }
+
+    public void setRepeat(Boolean repeat) {
+        this.repeat = repeat;
+    }
+
+    public Long getUnique() {
+        return unique;
+    }
+
+    public void setUnique(Long unique) {
+        this.unique = unique;
     }
 
     public String getName() {

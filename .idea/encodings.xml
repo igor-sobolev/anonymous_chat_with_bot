@@ -64,10 +64,10 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BotStrategyService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/BugTrackService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/ChatService.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MailService.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MessageLinkService.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/SemanticNetworkService.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/StdMessageService.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MailService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/MessageLinkService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/SemanticNetworkService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/StdMessageService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/UserService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/AdminServiceImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/lucifer/abchat/service/impl/BaseServiceImpl.java" charset="UTF-8" />
