@@ -97,9 +97,13 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
 
     public List<MessageDTO> receive(ChatDTO ch) {                               //return list of message for user
         Chat chat = findById(ch.getChatId());
-        Bot b = findBotInChat(ch.getChatId());
-        long botLastMsgCount = countLastBotMessages(chat);
-        double probForMsg = b.getStrategy().getInitiative() / Math.pow(botLastMsgCount, 4);
+        Bot b = findBotInChat(ch.getChatId());;
+        long botLastMsgCount = -1;
+        double probForMsg = 0.0;
+        if (b != null) {
+            botLastMsgCount = countLastBotMessages(chat);
+            probForMsg = b.getStrategy().getInitiative() / Math.pow(botLastMsgCount + 1, 4);
+        }
 
         Set<Message> messages = null;
         for (Cospeaker csp : chat.getCospeakers()) {
@@ -109,6 +113,7 @@ public class ChatServiceImpl extends BaseServiceImpl<Chat> implements ChatServic
                 }
             }
         }
+
         if (Math.random() < probForMsg) {
             Message botMessage = botService.initiativeMessage(ch.getChatId());
             if (botMessage != null && !repeats(botMessage)) messageDao.save(botMessage);
